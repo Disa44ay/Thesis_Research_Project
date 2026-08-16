@@ -127,4 +127,4 @@ The active candidate-gap search has expanded beyond PCBAS into:
 
 These remain hypotheses and are represented in the candidate nodes under [[07_topic_selection/TOPIC_LOCK_STATUS]].
 
-Graph link for preserved rejected branch: [[06_research_gaps/Candidate Gap C - Shared Backbone]].
+Historical rejected or high-risk branch: [[06_research_gaps/Candidate Gap C - Shared Backbone]].

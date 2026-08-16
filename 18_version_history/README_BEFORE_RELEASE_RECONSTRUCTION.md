@@ -54,4 +54,9 @@ Important new hard constraints include [[01_goals_constraints/constraints/Zero C
 
 PCBAS remains preserved as historical and possible research space, but the generic tactical-context gap has been downgraded by newer evidence. See [[07_topic_selection/downgraded/PCBAS Generic Tactical Context]].
 
+## Version 3, 2026-08-12
+This snapshot records the deadline-focused Candidate 01 validation sprint, PR-001 through PR-004, primary-source corrections, SoccerTrack v2 direct BAS analysis, exact dataset access location, benchmark draft, compute pipeline, and the evolution to relation-aware multimodal BAA.
+
+See [[18_version_history/VERSION_HISTORY]].
+
 Migration provenance: [[17_migration/MIGRATION_MANIFEST]].

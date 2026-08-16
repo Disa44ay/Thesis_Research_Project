@@ -177,3 +177,15 @@ Recent PCBAS work already incorporates tactical or graph context. The earlier br
 
 ### Evidence discipline
 These verified sources update the candidate landscape but do not yet prove novelty for any of the three new candidates. Further 2023 to 2026 literature falsification is required.
+
+## Literature update 2026-08-12: Candidate 01 adversarial verification
+
+The candidate survived only after narrowing the novelty boundary.
+
+1. [[04_literature/sources/SOURCE - FAANTRA 2025]] defines future Ball Action Anticipation.
+2. [[04_literature/sources/SOURCE - Ochin Game State Action Detection 2025]] already fuses visual and explicit game-state features, but for detection rather than anticipation.
+3. [[04_literature/sources/SOURCE - GenTac 2026]] and [[04_literature/sources/SOURCE - TacticGen 2026]] make generic tactical forecasting a weak novelty target.
+4. [[04_literature/sources/SOURCE - TacticAI 2024]] shows player geometry and graph reasoning are established in football.
+5. [[04_literature/sources/SOURCE - Seq2Event 2022]] and [[04_literature/sources/SOURCE - EventGPT ScoutGPT 2025-2026]] show that future event prediction from event streams is prior art.
+6. The current unresolved boundary is documented in [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]].
+7. The comparative synthesis is in [[04_literature/RELATED_WORK_MATRIX]].

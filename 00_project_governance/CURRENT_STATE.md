@@ -50,3 +50,26 @@ Research compute may expand modestly through Colab, but [[01_goals_constraints/c
 
 ### Topic status
 No final topic is locked.
+
+## State update 2026-08-12, 23:28 Asia/Dhaka
+
+### Deadline
+Title submission is due tomorrow. The project is now in a focused related-work, benchmark, novelty, and proposal sprint.
+
+### Strongest candidate
+[[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]
+
+### Current gap
+[[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]] plus [[06_research_gaps/Gap - Relation Aware Player Interactions for BAA]].
+
+### Dataset
+[[03_datasets/datasets/SoccerTrack v2]] is the current primary feasibility dataset. Direct BAS analysis is recorded in [[03_datasets/analysis/SoccerTrack v2 BAS Statistical Audit]].
+
+### Benchmark
+[[08_experiments/BENCHMARK_DESIGN_DRAFT]] uses 30 seconds observed and 5 seconds anticipated, with all future actions predicted as a set.
+
+### Compute
+[[09_implementation/COMPUTE_AND_DATA_PIPELINE]] keeps the topic feasible by converting raw 4K video and multi-gigabyte GSR into compact reusable features.
+
+### Topic lock status
+Not formally locked, but Candidate 01B is now a STRONG CANDIDATE rather than a broad hypothesis.

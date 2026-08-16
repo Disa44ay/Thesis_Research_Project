@@ -32,3 +32,10 @@ During the 2026-08-10 session, the project owner explicitly requested that Markd
 
 ## Rule 10. Research compute is not deployment budget
 Temporary paid research compute may be allowed, but final deployment must follow the project's current cost constraint. Never infer that willingness to pay for training implies willingness to pay recurring hosting or storage costs.
+
+## Update 2026-08-12: snapshot and helper provenance
+1. The two vaults remain separate. Reusable methodology belongs in Reusable Research OS. Topic-specific history belongs here.
+2. External AI prompts and consequential outputs must be tracked as research-run nodes.
+3. Corrections must be linked, not silently erased.
+4. Historical vault versions must remain immutable and serially recoverable.
+5. The authoritative dataset link supplied by the user must be preserved in the dataset node.

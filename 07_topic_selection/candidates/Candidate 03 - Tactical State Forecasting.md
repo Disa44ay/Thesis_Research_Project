@@ -32,3 +32,7 @@ The exact prediction target is not yet validated. "Tactical state" must become a
 
 ## Kill conditions
 Reject if the target requires more than the 100 to 150 annotation ceiling, if the label is subjective, or if no meaningful baseline and evaluation protocol can be defined quickly.
+
+## Downgrade update 2026-08-12
+
+This candidate is now lower priority because [[04_literature/sources/SOURCE - GenTac 2026]] and [[04_literature/sources/SOURCE - TacticGen 2026]] already occupy generic tactical forecasting and trajectory-generation territory. See [[07_topic_selection/downgraded/Generic Tactical Forecasting]].

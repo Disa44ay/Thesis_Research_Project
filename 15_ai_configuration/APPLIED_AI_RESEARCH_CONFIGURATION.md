@@ -33,3 +33,8 @@ During active topic discovery, Markdown synchronization may be deferred when exp
 For the current topic-search stage, every candidate should be actively falsified against 2023 to 2026 primary literature before being promoted.
 
 The active search must respect the atomic graph nodes under `01_goals_constraints/constraints`, `04_literature/sources`, `07_topic_selection`, and `14_decisions`.
+
+## Update 2026-08-12: helper allocation
+See [[15_ai_configuration/AI_HELPER_REGISTRY]].
+
+PR-001 through PR-004 are now explicit graph nodes. Their raw findings are not treated as verified evidence until corrected against primary sources.

@@ -25,3 +25,21 @@ It combines complete-pitch spatial state with action annotations and therefore s
 
 ## Main risk
 Raw 4K full-match processing may still exceed the practical project budget. The project should prefer structured annotations, trajectories, selective clips, or downsampled visual processing unless a candidate specifically requires raw frames.
+
+## Direct access and file verification, 2026-08-12
+
+### User-verified full dataset access
+Google Drive folder supplied and confirmed by the user:
+
+https://drive.google.com/drive/folders/1N2Qx2qkFgRtpbHitl2Vh6sLVYGgqkWwn
+
+The folder contains the release components including BAS, raw data, videos, GSR, and MOT.
+
+### Direct BAS verification
+The user uploaded the complete 10-match BAS JSON set. See [[03_datasets/analysis/SoccerTrack v2 BAS Statistical Audit]].
+
+### Practical GSR note
+The released GSR units are multi-gigabyte files. See [[03_datasets/analysis/SoccerTrack v2 GSR Practical Handling]].
+
+### Current thesis role
+SoccerTrack v2 is the primary feasibility dataset for [[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]. It enables a derived 30-second observation to 5-second future BAA benchmark without large-scale manual relabeling.

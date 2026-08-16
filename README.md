@@ -1,7 +1,7 @@
 ---
 type: moc
 status: active
-public_release: "Release 01"
+public_release: "Release 02"
 updated: 2026-08-16
 tags: [thesis, football, baa, git-ready, moc]
 ---
@@ -9,16 +9,16 @@ tags: [thesis, football, baa, git-ready, moc]
 
 ## 1. Project Overview
 
-This repository preserves the football thesis search at the end of the foundation period. Football is the active domain, the original PCBAS direction is preserved, and newer candidate families are being evaluated under explicit compute, data, annotation, and deployment constraints.
+This repository captures the evidence-driven narrowing of the thesis toward short-horizon football Ball Action Anticipation using visual and explicit game-state information. Candidate 01B is leading, but final novelty and benchmark details are still provisional.
 
 Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known, what changed, and what remained uncertain at this release.
 
 ## 2. Features
 
-1. Preserved PCBAS history and candidate gaps A-D.
-2. Football scope and feasibility constraints.
-3. Candidate families around anticipation, tactical retrieval, and forecasting.
-4. Atomic decision and research-history graph.
+1. PR-001 to PR-004 with corrections and provenance.
+2. Direct SoccerTrack BAS snapshot audit.
+3. Candidate 01B and derived BAA benchmark draft.
+4. Compute-safe one-time preprocessing strategy.
 
 ## 3. Tech Stack
 
@@ -33,7 +33,7 @@ Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known,
 ## 4. Architecture
 
 ```text
-Constraints + Literature + Dataset Search --> Candidate Comparison --> Decisions --> Next Verification
+SoccerTrack Video/GSR/BAS --> Derived BAA Windows --> Visual / State / Fusion Candidate Models (planned)
 ```
 
 Implemented, planned, and experimental status are distinguished in [[ARCHITECTURE]] and the existing implementation/experiment notes.

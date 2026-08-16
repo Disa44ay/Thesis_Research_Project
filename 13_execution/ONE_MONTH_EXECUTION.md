@@ -91,3 +91,8 @@ Within two days:
 5. do not falsely label any candidate as a validated final topic.
 
 See [[01_goals_constraints/constraints/Title Deadline]] and [[14_decisions/2026-08-10 - Candidate Title Strategy]].
+
+## Deadline sprint update 2026-08-12
+Before implementation starts, complete the immediate title-submission sprint defined in [[14_decisions/2026-08-12 - Strategic Related Work and Proposal Sprint]].
+
+Implementation should start only after the related-work matrix, benchmark class policy, and final title are locked.

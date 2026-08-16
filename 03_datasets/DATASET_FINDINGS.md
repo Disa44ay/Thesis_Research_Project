@@ -80,3 +80,11 @@ Directly downloadable datasets are preferred. Free request-based academic access
 
 ### Compute warning
 A public dataset is not automatically feasible. Full-match 4K video can still be too expensive. Prefer structured annotations, selective clips, downsampled data, or frozen features when scientifically legitimate.
+
+## Dataset update 2026-08-12: SoccerTrack v2 direct audit
+
+The user confirmed direct access to the complete SoccerTrack v2 release and supplied the 10 BAS JSON files for analysis.
+
+[[03_datasets/analysis/SoccerTrack v2 BAS Statistical Audit]] found 23,663 actions with severe long-tail imbalance but enough total annotations to keep the derived BAA benchmark viable.
+
+The GSR release is too large to move through chat directly. [[03_datasets/analysis/SoccerTrack v2 GSR Practical Handling]] defines a streaming and downsampling plan.

@@ -129,3 +129,64 @@ Multimodal requirement → every claimed modality must be verified from public d
 
 ### Reasoning rule
 Rejected, downgraded, and superseded nodes remain in the graph. They are evidence of the journey, not clutter to delete.
+
+## Graph update 2026-08-12
+
+### AI research provenance branch
+[[15_ai_configuration/AI_HELPER_REGISTRY]]
+→ [[15_ai_configuration/research_runs/PR 001 - Gemini Adversarial Literature Hunt]]
+→ [[15_ai_configuration/research_runs/PR 002 - Claude Deep Verification]]
+→ [[15_ai_configuration/research_runs/PR 003 - Gemini Targeted Verification]]
+→ [[15_ai_configuration/research_runs/PR 004 - Perplexity Novelty Audit]]
+→ [[04_literature/RELATED_WORK_MATRIX]]
+
+### Exact novelty branch
+[[04_literature/sources/SOURCE - FAANTRA 2025]]
+→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
+← [[04_literature/sources/SOURCE - SoccerNet Challenges 2026]]
+
+[[04_literature/sources/SOURCE - Ochin Game State Action Detection 2025]]
+→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
+→ [[06_research_gaps/Gap - Relation Aware Player Interactions for BAA]]
+← [[04_literature/sources/SOURCE - TacticAI 2024]]
+
+[[04_literature/sources/SOURCE - Seq2Event 2022]]
+→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
+← [[04_literature/sources/SOURCE - EventGPT ScoutGPT 2025-2026]]
+
+### Forecasting downgrade branch
+[[04_literature/sources/SOURCE - GenTac 2026]]
+→ [[07_topic_selection/downgraded/Generic Tactical Forecasting]]
+← [[04_literature/sources/SOURCE - TacticGen 2026]]
+→ [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
+
+### Dataset evidence branch
+[[03_datasets/datasets/SoccerTrack v2]]
+→ [[03_datasets/analysis/SoccerTrack v2 BAS Statistical Audit]]
+→ [[08_experiments/BENCHMARK_DESIGN_DRAFT]]
+
+[[03_datasets/datasets/SoccerTrack v2]]
+→ [[03_datasets/analysis/SoccerTrack v2 GSR Practical Handling]]
+→ [[09_implementation/COMPUTE_AND_DATA_PIPELINE]]
+
+### Candidate evolution branch
+[[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
+→ [[14_decisions/2026-08-12 - Candidate 01 Narrowed to Relation Aware Multimodal BAA]]
+→ [[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]
+→ [[07_topic_selection/TITLE_CANDIDATES_2026-08-12]]
+→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
+
+### Experiment branch
+[[08_experiments/BENCHMARK_DESIGN_DRAFT]]
+→ [[08_experiments/BASELINE_AND_ABLATION_PLAN]]
+→ [[08_experiments/EXPERIMENT_STATUS]]
+
+### Compute branch
+[[01_goals_constraints/constraints/Research Compute Budget]]
+→ [[14_decisions/2026-08-12 - Raw 4K End to End Training Rejected]]
+→ [[09_implementation/COMPUTE_AND_DATA_PIPELINE]]
+
+### Version branch
+[[18_version_history/VERSION_HISTORY]]
+← [[16_session_history/SESSION_LOG]]
+← [[14_decisions/DECISION_LOG]]

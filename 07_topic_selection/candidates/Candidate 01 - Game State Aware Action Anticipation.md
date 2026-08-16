@@ -42,3 +42,7 @@ Fuse visual or video-derived context with structured game-state or trajectory co
 
 ## Kill conditions
 Reject if recent literature already demonstrates the same fusion for the same task, if no defensible dataset alignment exists, or if evaluation would depend on large manual relabeling.
+
+## Evolution update 2026-08-12
+
+This original candidate is preserved as a historical node. It evolved into [[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]] after adversarial literature review showed that generic tactical context, football GNNs, video plus game-state action detection, and future event prediction already exist.

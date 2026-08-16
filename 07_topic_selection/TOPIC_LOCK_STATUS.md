@@ -38,3 +38,26 @@ The instructor allows multiple candidate titles, and the project has at most two
 
 ### Explicit non-lock
 None of these is a final topic. The next research step is to attack Candidate 01 first and try to falsify it against recent literature and dataset alignment.
+
+## Update 2026-08-12, late deadline sprint
+
+### Strongest current candidate
+[[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]
+
+### Current title leader
+**Relation-Aware Multimodal Game-State Fusion for Short-Horizon Ball Action Anticipation in Football**
+
+### Why it leads
+1. Exact BAA task exists through FAANTRA, giving a credible research anchor.
+2. Video plus game-state fusion exists for detection, leaving a narrower future-anticipation question rather than a fake broad gap.
+3. SoccerTrack v2 provides public synchronized video, game-state, and BAS ingredients.
+4. Direct BAS analysis shows 23,663 labeled actions.
+5. Compute is manageable if raw 4K video and GSR are converted once into compact features.
+
+### Remaining blockers before title lock
+1. Finish deep related-work matrix and verify final novelty wording.
+2. Lock benchmark class policy and match-level split.
+3. Ensure relation-aware fusion is sufficiently distinct from simple concatenation.
+
+### Fallbacks
+Candidate 02 remains the strongest system-heavy fallback. Candidate 03 is downgraded due recent tactical forecasting work.

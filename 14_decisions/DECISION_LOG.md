@@ -146,3 +146,11 @@ Use short-horizon or coarse future targets instead. See [[07_topic_selection/rej
 
 ## Decision 23 — Broad PCBAS tactical-context gap downgraded
 Recent verified work already uses tactical and graph context. See [[07_topic_selection/downgraded/PCBAS Generic Tactical Context]].
+
+## Decisions added 2026-08-12
+1. [[14_decisions/2026-08-12 - Candidate 01 Narrowed to Relation Aware Multimodal BAA]]
+2. [[14_decisions/2026-08-12 - SoccerTrack v2 Primary Feasibility Dataset]]
+3. [[14_decisions/2026-08-12 - BAA Benchmark Protocol 30s to 5s]]
+4. [[14_decisions/2026-08-12 - Raw 4K End to End Training Rejected]]
+5. [[14_decisions/2026-08-12 - External AI Helper Strategy]]
+6. [[14_decisions/2026-08-12 - Strategic Related Work and Proposal Sprint]]

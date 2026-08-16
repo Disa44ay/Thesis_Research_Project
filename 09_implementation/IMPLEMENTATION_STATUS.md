@@ -19,3 +19,8 @@ The final system must support zero recurring deployment cost. See [[01_goals_con
 Preferred architecture principle: process short video inputs transiently or locally, persist lightweight derived outputs, and avoid making permanent raw-video object storage a requirement.
 
 Backend or system architecture remains a major portfolio objective, but it must support a defensible research contribution rather than substitute for one.
+
+## Update 2026-08-12
+Implementation has not started. A compute-safe preprocessing architecture is defined in [[09_implementation/COMPUTE_AND_DATA_PIPELINE]].
+
+Raw 4K end-to-end repeated training is rejected. Frozen visual feature extraction plus compact structured game-state preprocessing is the current feasibility plan.

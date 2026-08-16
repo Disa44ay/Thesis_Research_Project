@@ -57,3 +57,23 @@ Strong interest was expressed in tactical analysis, future-gameplay prediction, 
 
 ### Next session
 Attack Candidate 01 first. Search recent literature for equivalent game-state-aware anticipation, verify dataset alignment and baseline reproducibility, then either kill, narrow, or promote it. After that, perform the same process for Candidates 02 and 03 and prepare 2 to 3 instructor-facing titles.
+
+## Session 2026-08-12, Candidate 01 validation sprint
+
+### External AI research
+1. [[15_ai_configuration/research_runs/PR 001 - Gemini Adversarial Literature Hunt]] completed with metadata and reasoning corrections.
+2. [[15_ai_configuration/research_runs/PR 002 - Claude Deep Verification]] partially completed before Claude Free quota exhaustion.
+3. [[15_ai_configuration/research_runs/PR 003 - Gemini Targeted Verification]] completed with several factual corrections.
+4. [[15_ai_configuration/research_runs/PR 004 - Perplexity Novelty Audit]] completed in free Search mode and required a novelty-reasoning correction.
+
+### Dataset work
+The user supplied the official SoccerTrack v2 Google Drive folder and uploaded all 10 BAS JSON files. Direct audit produced 23,663 total actions and exposed severe long-tail imbalance plus a small timeline anomaly cluster.
+
+### Candidate evolution
+The original game-state anticipation idea was narrowed to [[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]. Generic tactical forecasting was downgraded.
+
+### Compute decision
+The project remains feasible only with one-time feature extraction and compact structured preprocessing. End-to-end repeated 4K video training is rejected.
+
+### Immediate next work
+Related works, limitations, novelty boundary, benchmark design, title lock, full proposal, hostile review.
