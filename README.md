@@ -1,7 +1,7 @@
 ---
 type: moc
 status: active
-public_release: "Release 02"
+public_release: "Release 03"
 updated: 2026-08-16
 tags: [thesis, football, baa, git-ready, moc]
 ---
@@ -9,16 +9,16 @@ tags: [thesis, football, baa, git-ready, moc]
 
 ## 1. Project Overview
 
-This repository captures the evidence-driven narrowing of the thesis toward short-horizon football Ball Action Anticipation using visual and explicit game-state information. Candidate 01B is leading, but final novelty and benchmark details are still provisional.
+This repository captures the scientifically re-verified thesis state. The defensible core question is whether explicit player game state adds predictive value to unseen-future Ball Action Anticipation. Dataset counts/folds remain gated on canonical release validation.
 
 Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known, what changed, and what remained uncertain at this release.
 
 ## 2. Features
 
-1. PR-001 to PR-004 with corrections and provenance.
-2. Direct SoccerTrack BAS snapshot audit.
-3. Candidate 01B and derived BAA benchmark draft.
-4. Compute-safe one-time preprocessing strategy.
+1. PR-005 and full primary-source re-verification.
+2. Narrow novelty lock and additional prior-art threats.
+3. Canonical release/alignment risks and withdrawn premature counts/folds.
+4. Controlled B0-B5 experiment matrix.
 
 ## 3. Tech Stack
 
@@ -33,7 +33,7 @@ Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known,
 ## 4. Architecture
 
 ```text
-SoccerTrack Video/GSR/BAS --> Derived BAA Windows --> Visual / State / Fusion Candidate Models (planned)
+Pinned Dataset Gate --> Controlled B1-B5 Models --> Match-level Evaluation --> Scientific Interpretation
 ```
 
 Implemented, planned, and experimental status are distinguished in [[ARCHITECTURE]] and the existing implementation/experiment notes.

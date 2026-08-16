@@ -154,3 +154,6 @@ Recent verified work already uses tactical and graph context. See [[07_topic_sel
 4. [[14_decisions/2026-08-12 - Raw 4K End to End Training Rejected]]
 5. [[14_decisions/2026-08-12 - External AI Helper Strategy]]
 6. [[14_decisions/2026-08-12 - Strategic Related Work and Proposal Sprint]]
+
+## 2026-08-14 - Candidate 01 survives full re-verification
+Core novelty is now the empirical value of explicit player game state for future BAA. Relation-aware modeling is a controlled method study, not the main invention. Exact dataset counts and folds remain gated on canonical release/alignment validation. See [[../19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]].

@@ -1,192 +1,36 @@
 ---
 type: moc
 status: active
+updated: 2026-08-14
 tags: [knowledge-graph, thesis, moc]
-updated: 2026-08-10
 ---
-# Thesis Knowledge Graph
+# Knowledge Graph
 
-## Governance and current state
-[[00_project_governance/PROJECT_RULES]]
-→ [[00_project_governance/CURRENT_STATE]]
+## Scientific-lock spine
+```mermaid
+flowchart TD
+    L[[19_verification/PHASE_1_RELATED_WORK_LOCK]] --> N[[19_verification/PHASE_3_NOVELTY_LOCK]]
+    D[[03_datasets/datasets/SoccerTrack v2]] --> B[[08_experiments/BENCHMARK_PROTOCOL_LOCK]]
+    N --> M[[08_experiments/PHASE_4_MODEL_AND_EXPERIMENT_MATRIX]]
+    B --> M
+    V[[19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]] --> N
+    V --> B
+    P[[15_ai_configuration/research_runs/PR 005 - Claude Final Evidence Lock]] --> V
+```
 
-## Research journey
-[[00_context/USER_PROFILE]]
-→ [[01_goals_constraints/GOALS_AND_CONSTRAINTS]]
-→ [[02_journey/DOMAIN_EXPLORATION]]
-→ [[03_datasets/DATASET_FINDINGS]]
-→ [[04_literature/LITERATURE_FINDINGS]]
-→ [[05_direction/PCBAS_STATE]]
-→ [[06_research_gaps/RESEARCH_GAPS]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-→ [[08_experiments/EXPERIMENT_STATUS]]
-→ [[09_implementation/IMPLEMENTATION_STATUS]]
-→ [[10_writing/THESIS_AND_PAPER_STATUS]]
-→ [[11_publication/PUBLICATION_STATUS]]
-→ [[12_defense/DEFENSE_STATUS]]
+## Key evidence
+- [[04_literature/sources/SOURCE - FAANTRA 2025]]
+- [[04_literature/sources/SOURCE - SoccerNet Challenges 2026]]
+- [[04_literature/sources/SOURCE - Ochin Game State Action Detection 2025]]
+- [[04_literature/sources/SOURCE - Beyond Pixels 2025]]
+- [[04_literature/sources/SOURCE - FOOTPASS 2025]]
+- [[04_literature/sources/SOURCE - SoccerTrack v2 2025]]
 
-## Football branch
-[[05_direction/concepts/SoccerNet]]
-→ [[05_direction/concepts/PCBAS]]
-→ [[05_direction/baselines/FOOTPASS]]
-→ [[05_direction/concepts/SoccerNet Tracking]]
-→ [[06_research_gaps/Candidate Gap A - ID Drop Repair]]
-→ [[06_research_gaps/Candidate Gap B - Tactical Priors]]
-→ [[06_research_gaps/Candidate Gap D - Audio Visual Fusion]]
+## Active candidate
+[[07_topic_selection/TOPIC_LOCK_STATUS]] retains Candidate 01 with narrowed novelty. Phase 5 title selection belongs to the next release.
 
-## Control and history
-[[13_execution/ONE_MONTH_EXECUTION]]
-→ [[14_decisions/DECISION_LOG]]
-→ [[16_session_history/SESSION_LOG]]
+## Historical branches
+[[05_direction/PCBAS_STATE]], [[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]], [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]], and all rejection/downgrade nodes remain preserved.
 
-## Current reasoning chain
-Football interest → Football Video Understanding → SoccerNet ecosystem → PCBAS leading candidate.
-
-No local GPU + one-month constraint → avoid heavy end-to-end raw-video training → prefer official pre-extracted features or structured tracking data when scientifically legitimate.
-
-Publication goal → novelty claims require primary evidence.
-
-Multimodal requirement → every claimed modality must be verified from public dataset access before topic lock.
-
-
-## Graph update 2026-08-10
-
-### Current constraint cluster
-[[01_goals_constraints/constraints/Football Domain Scope]]
-→ [[14_decisions/2026-08-10 - Football Scope Locked]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-[[01_goals_constraints/constraints/Computer Vision Preference]]
-→ [[02_journey/DOMAIN_EXPLORATION]]
-
-[[01_goals_constraints/constraints/Multimodality Preference]]
-→ [[14_decisions/2026-08-10 - Multimodality Is Preference Not Requirement]]
-→ [[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-
-[[04_literature/sources/SOURCE - Google Colab Paid Services 2026]]
-→ [[01_goals_constraints/constraints/Research Compute Budget]]
-→ [[14_decisions/2026-08-10 - Research Compute Expanded Deployment Still Free]]
-← [[01_goals_constraints/constraints/Zero Cost Deployment]]
-
-[[01_goals_constraints/constraints/Dataset Access Policy]]
-→ [[14_decisions/2026-08-10 - Dataset Access Preference]]
-
-[[01_goals_constraints/constraints/Team Capacity]]
-→ [[01_goals_constraints/constraints/Annotation Budget]]
-→ [[14_decisions/2026-08-10 - Annotation Ceiling]]
-
-[[01_goals_constraints/constraints/Title Deadline]]
-→ [[14_decisions/2026-08-10 - Candidate Title Strategy]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-### Game-state and anticipation branch
-[[04_literature/sources/SOURCE - SoccerNet GSR 2024]]
-→ [[03_datasets/datasets/SoccerNet GSR]]
-→ [[05_direction/concepts/Game State Reconstruction]]
-
-[[04_literature/sources/SOURCE - FAANTRA 2025]]
-→ [[03_datasets/datasets/SoccerNet Ball Action Anticipation]]
-→ [[05_direction/concepts/Ball Action Anticipation]]
-→ [[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-
-[[04_literature/sources/SOURCE - SoccerTrack v2 2025]]
-→ [[03_datasets/datasets/SoccerTrack v2]]
-→ [[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-→ [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
-
-### Retrieval branch
-[[04_literature/sources/SOURCE - SoccerRAG 2024]]
-→ [[07_topic_selection/rejections/Generic Football RAG]]
-→ [[05_direction/concepts/Tactical Retrieval]]
-→ [[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]]
-
-[[03_datasets/datasets/SoccerTrack v2]]
-→ [[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]]
-
-### PCBAS evidence correction branch
-[[04_literature/sources/SOURCE - FOOTPASS 2025]]
-→ [[05_direction/baselines/FOOTPASS]]
-→ [[07_topic_selection/downgraded/PCBAS Generic Tactical Context]]
-
-[[04_literature/sources/SOURCE - PCBAS Extensions 2026]]
-→ [[07_topic_selection/downgraded/PCBAS Generic Tactical Context]]
-→ [[06_research_gaps/Candidate Gap B - Tactical Priors]]
-
-### Forecasting correction branch
-[[04_literature/sources/SOURCE - FAANTRA 2025]]
-→ [[07_topic_selection/rejections/Exact 30 Second Future Prediction]]
-→ [[05_direction/concepts/Ball Action Anticipation]]
-
-### Current candidate convergence
-[[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-[[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-[[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-### Reasoning rule
-Rejected, downgraded, and superseded nodes remain in the graph. They are evidence of the journey, not clutter to delete.
-
-## Graph update 2026-08-12
-
-### AI research provenance branch
-[[15_ai_configuration/AI_HELPER_REGISTRY]]
-→ [[15_ai_configuration/research_runs/PR 001 - Gemini Adversarial Literature Hunt]]
-→ [[15_ai_configuration/research_runs/PR 002 - Claude Deep Verification]]
-→ [[15_ai_configuration/research_runs/PR 003 - Gemini Targeted Verification]]
-→ [[15_ai_configuration/research_runs/PR 004 - Perplexity Novelty Audit]]
-→ [[04_literature/RELATED_WORK_MATRIX]]
-
-### Exact novelty branch
-[[04_literature/sources/SOURCE - FAANTRA 2025]]
-→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
-← [[04_literature/sources/SOURCE - SoccerNet Challenges 2026]]
-
-[[04_literature/sources/SOURCE - Ochin Game State Action Detection 2025]]
-→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
-→ [[06_research_gaps/Gap - Relation Aware Player Interactions for BAA]]
-← [[04_literature/sources/SOURCE - TacticAI 2024]]
-
-[[04_literature/sources/SOURCE - Seq2Event 2022]]
-→ [[06_research_gaps/Gap - Multimodal Game State Fusion for BAA]]
-← [[04_literature/sources/SOURCE - EventGPT ScoutGPT 2025-2026]]
-
-### Forecasting downgrade branch
-[[04_literature/sources/SOURCE - GenTac 2026]]
-→ [[07_topic_selection/downgraded/Generic Tactical Forecasting]]
-← [[04_literature/sources/SOURCE - TacticGen 2026]]
-→ [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
-
-### Dataset evidence branch
-[[03_datasets/datasets/SoccerTrack v2]]
-→ [[03_datasets/analysis/SoccerTrack v2 BAS Statistical Audit]]
-→ [[08_experiments/BENCHMARK_DESIGN_DRAFT]]
-
-[[03_datasets/datasets/SoccerTrack v2]]
-→ [[03_datasets/analysis/SoccerTrack v2 GSR Practical Handling]]
-→ [[09_implementation/COMPUTE_AND_DATA_PIPELINE]]
-
-### Candidate evolution branch
-[[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-→ [[14_decisions/2026-08-12 - Candidate 01 Narrowed to Relation Aware Multimodal BAA]]
-→ [[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]
-→ [[07_topic_selection/TITLE_CANDIDATES_2026-08-12]]
-→ [[07_topic_selection/TOPIC_LOCK_STATUS]]
-
-### Experiment branch
-[[08_experiments/BENCHMARK_DESIGN_DRAFT]]
-→ [[08_experiments/BASELINE_AND_ABLATION_PLAN]]
-→ [[08_experiments/EXPERIMENT_STATUS]]
-
-### Compute branch
-[[01_goals_constraints/constraints/Research Compute Budget]]
-→ [[14_decisions/2026-08-12 - Raw 4K End to End Training Rejected]]
-→ [[09_implementation/COMPUTE_AND_DATA_PIPELINE]]
-
-### Version branch
-[[18_version_history/VERSION_HISTORY]]
-← [[16_session_history/SESSION_LOG]]
-← [[14_decisions/DECISION_LOG]]
+## Provenance
+See [[18_version_history/VERSION_HISTORY]], [[16_session_history/SESSION_LOG]], and [[14_decisions/DECISION_LOG]].

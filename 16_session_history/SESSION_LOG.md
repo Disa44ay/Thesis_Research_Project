@@ -2,7 +2,7 @@
 type: session-log
 status: active
 tags: [session, history]
-updated: 2026-08-10
+updated: 2026-08-14
 ---
 # Session Log
 
@@ -77,3 +77,6 @@ The project remains feasible only with one-time feature extraction and compact s
 
 ### Immediate next work
 Related works, limitations, novelty boundary, benchmark design, title lock, full proposal, hostile review.
+
+## 2026-08-14 - Scientific lock
+Claude PR-005 returned KEEP BUT NARROW. Independent re-verification confirmed Candidate 01 but corrected context-window wording, mAP tolerance interpretation, method novelty, SoccerTrack release provenance, provisional BAS cleaning, and fold assignment. Architecture/experiment ladder B0-B5 was locked.

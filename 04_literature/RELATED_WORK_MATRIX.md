@@ -36,3 +36,6 @@ Do not claim:
 Potentially defensible after final verification:
 
 "No exact prior work was identified in the current search that fuses synchronized full-pitch player game state with visual features specifically for temporally localized short-horizon Ball Action Anticipation."
+
+## 2026-08-14 re-verification addendum
+[[sources/SOURCE - Beyond Pixels 2025]] and newer FOOTPASS-related work confirm that game-state-aware, relation-aware, and longer-context football action understanding already has prior art in detection/spotting. The remaining defensible bridge is explicit game-state value for *unobserved-future* BAA. See [[../19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]].

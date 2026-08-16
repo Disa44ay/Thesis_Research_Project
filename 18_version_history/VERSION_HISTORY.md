@@ -2,7 +2,7 @@
 type: version-history
 status: active
 created: 2026-08-12
-updated: 2026-08-12
+updated: 2026-08-14
 tags: [versions, history, provenance]
 related:
   - "[[16_session_history/SESSION_LOG]]"
@@ -20,3 +20,6 @@ Graph-native expansion. Added atomic constraint, decision, dataset, source, cand
 Deadline-focused validation. Added PR-001 through PR-004 AI research-run provenance, primary-source corrections, new related-work sources, SoccerTrack v2 BAS file audit, direct dataset access record, compute pipeline, derived BAA benchmark draft, relation-aware fusion gap, and Candidate 01B as the strongest current candidate.
 
 Historical snapshots remain immutable.
+
+## v4, 2026-08-14
+Scientific-lock snapshot. Added PR-005, Phase 1 related-work lock, benchmark protocol lock, Phase 3 novelty lock, Phase 4 controlled experiment matrix, Beyond Pixels prior art, and a full evidence re-verification that withdraws premature clean-event/fold claims and downgrades method novelty while preserving the core BAA game-state research question.

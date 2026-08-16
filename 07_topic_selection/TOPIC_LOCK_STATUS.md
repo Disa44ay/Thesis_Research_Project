@@ -1,63 +1,30 @@
 ---
-type: topic-selection
-status: not-locked
-tags: [topic-lock, decision]
-updated: 2026-08-10
+type: topic-status
+status: keep-and-advance
+updated: 2026-08-14
+tags: [topic-selection, baa, soccertrack-v2]
+related:
+  - "[[candidates/Candidate 01 - Game State Aware Action Anticipation]]"
+  - "[[candidates/Candidate 01B - Relation Aware Multimodal BAA]]"
+  - "[[../19_verification/PHASE_3_NOVELTY_LOCK]]"
+  - "[[../00_project_governance/CURRENT_STATE]]"
 ---
 # Topic Lock Status
 
-The final thesis topic is not locked.
+## Decision
+**KEEP AND ADVANCE Candidate 01**, with narrowed novelty.
 
-## Provisional direction
-SoccerNet → Player-Centric Ball Action Spotting, PCBAS.
+## Current research framing
+Evaluate whether explicit synchronized player-level game state provides complementary predictive value for short-horizon Ball Action Anticipation, and whether relation-aware player modeling adds value beyond flat structured fusion.
 
-## Required before lock
-1. Verify exact dataset access and version.
-2. Verify exact PCBAS benchmark definition.
-3. Verify a reproducible baseline and repository.
-4. Verify recent and foundational literature.
-5. Validate a genuine research gap from primary evidence.
-6. Confirm one-month and free-cloud compute feasibility.
-7. Verify any claimed multimodal inputs.
-8. Confirm an objective evaluation protocol.
+## Why it survives
+1. BAA exists, so the task is grounded.
+2. Game-state fusion exists for detection/spotting, so the information source is grounded.
+3. The reviewed literature does not establish the same explicit game-state fusion question for an unobserved future BAA interval.
+4. SoccerTrack v2 supplies the necessary synchronized modalities.
+5. A negative result remains scientifically interpretable.
 
-No topic should be locked merely because it is interesting or repeatedly suggested by AI.
+## What is no longer claimed
+GNNs, player graphs, multimodal football action understanding, tactical context, and future football-event prediction are not treated as first-time inventions.
 
-## Candidate-title checkpoint 2026-08-10
-The instructor allows multiple candidate titles, and the project has at most two days to prepare them.
-
-### Current candidate families
-1. [[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
-2. [[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]]
-3. [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
-
-### Current ranking after first sweep
-1. Game State Aware Action Anticipation — strongest current balance of research structure, CV, meaningful multimodality, and system potential.
-2. Tactical Spatiotemporal Retrieval — strongest backend and product integration, but novelty and evaluation need stronger proof.
-3. Tactical State Forecasting — potentially unique and compute-efficient, but the target variable is not yet sufficiently defined.
-
-### Explicit non-lock
-None of these is a final topic. The next research step is to attack Candidate 01 first and try to falsify it against recent literature and dataset alignment.
-
-## Update 2026-08-12, late deadline sprint
-
-### Strongest current candidate
-[[07_topic_selection/candidates/Candidate 01B - Relation Aware Multimodal BAA]]
-
-### Current title leader
-**Relation-Aware Multimodal Game-State Fusion for Short-Horizon Ball Action Anticipation in Football**
-
-### Why it leads
-1. Exact BAA task exists through FAANTRA, giving a credible research anchor.
-2. Video plus game-state fusion exists for detection, leaving a narrower future-anticipation question rather than a fake broad gap.
-3. SoccerTrack v2 provides public synchronized video, game-state, and BAS ingredients.
-4. Direct BAS analysis shows 23,663 labeled actions.
-5. Compute is manageable if raw 4K video and GSR are converted once into compact features.
-
-### Remaining blockers before title lock
-1. Finish deep related-work matrix and verify final novelty wording.
-2. Lock benchmark class policy and match-level split.
-3. Ensure relation-aware fusion is sufficiently distinct from simple concatenation.
-
-### Fallbacks
-Candidate 02 remains the strongest system-heavy fallback. Candidate 03 is downgraded due recent tactical forecasting work.
+Final instructor-facing title selection is deferred to Phase 5 and will be recorded in the next release.

@@ -1,8 +1,8 @@
 ---
 type: version-brief
 status: active
-public_release: "Release 02"
-historical_basis: "historical v3 (2026-08-12)"
+public_release: "Release 03"
+historical_basis: "historical v4 (2026-08-14)"
 updated: 2026-08-16
 tags: [release, history, git, obsidian]
 related:
@@ -10,52 +10,54 @@ related:
   - "[[RELEASE_HISTORY]]"
   - "[[ARCHITECTURE]]"
 ---
-# Version Brief — Release 02
+# Version Brief — Release 03
 
 ## Release identity
 
 **Project:** Thesis Research Project  
-**Public release:** Release 02 — Evidence-Driven Candidate Validation  
-**Historical basis:** historical v3 (2026-08-12)  
-**Previous public release:** Release 01
+**Public release:** Release 03 — Scientific Lock and Re-verification  
+**Historical basis:** historical v4 (2026-08-14)  
+**Previous public release:** Release 02
 
 ## Plain-language summary
 
-Release 02 captures the evidence-driven narrowing of the thesis. Multiple AI assistants were used as scoped researchers, their outputs were corrected against primary sources, the SoccerTrack v2 BAS snapshot was directly inspected, and Candidate 01B emerged as the strongest direction: short-horizon Ball Action Anticipation using visual and explicit game-state information.
+Release 03 is the scientific-lock stage. The project survived a final adversarial review, but several claims were narrowed or withdrawn. The thesis became centered on one defensible empirical question: whether explicit player game state adds predictive value to short-horizon Ball Action Anticipation, not whether graph reasoning or video-plus-state fusion is novel by itself.
 
 ## Previous release summary
 
-Release 01 established football as the active domain, preserved the old PCBAS path, and defined the candidate search and feasibility constraints.
+Release 02 made Candidate 01B the leading direction using direct dataset evidence and multi-agent literature review, but several assumptions remained provisional.
 
 ## What changed
 
-1. Recorded PR-001 through PR-004 with assistant roles, outputs, errors, and corrections.
-2. Expanded the verified related-work set around FAANTRA, SoccerNet BAA, Ochin, TacticAI, GenTac, Seq2Event, EventGPT/ScoutGPT, TacticGen and SoccerRAG.
-3. Directly audited the user-provided SoccerTrack BAS snapshot and recorded 23,663 events for that snapshot, including strong class imbalance and timestamp anomalies.
-4. Established SoccerTrack v2 as the primary feasibility dataset.
-5. Rejected repeated end-to-end 4K training in favor of one-time visual feature extraction and compact GSR processing.
-6. Drafted a derived BAA benchmark and controlled visual/state/fusion baselines.
-7. Narrowed Candidate 01 toward relation-aware multimodal BAA while retaining alternatives 02 and 03 as downgraded candidates.
+1. Added PR-005, a focused Claude evidence-lock review.
+2. Re-verified FAANTRA, SoccerNet 2026 BAA, Ochin, SoccerTrack v2 and additional prior art from primary sources.
+3. Added Beyond Pixels as a novelty threat and downgraded relation/GNN method novelty.
+4. Locked the core research gap around explicit game-state value for unseen-future BAA.
+5. Corrected the interpretation of the 30-second observation context and BAA temporal mAP tolerances.
+6. Withdrew the provisional 21,438 'clean events' estimate.
+7. Withdrew exact fold pairings until canonical release and alignment validation.
+8. Documented canonical-source/schema differences, second-half alignment caveats, and the match 132831 correction issue.
+9. Defined the controlled B0-B5 experiment matrix, including a flat-relations control.
 
 ## Why it changed
 
-Broad discovery showed that generic football retrieval and generic tactical forecasting already had strong prior art. Direct data inspection showed that SoccerTrack v2 could support a future-action task without large manual labeling, while compute analysis showed the raw data had to be transformed once into compact representations.
+The candidate had to survive the strongest prior work rather than rely on optimistic novelty language. Re-verification also showed that the Drive BAS snapshot and current documented release should not be silently treated as identical.
 
 ## What we were trying to learn
 
-The promising gap was not 'future football prediction' or 'video plus game state' in general. It was the more specific question of whether explicit synchronized game state helps prediction of unseen future ball actions.
+The research question remains useful even if the GNN adds no gain, because the study can separately test information value, relational features, and message passing. Dataset provenance is part of the scientific method, not merely preprocessing.
 
 ## Current understanding
 
-Candidate 01B was the leading topic, but its novelty was still provisional and benchmark counts/folds had not yet passed a final adversarial verification.
+The topic is defensible with narrow claims. The benchmark framework is scientifically usable, but exact event counts and match folds remain gated on a pinned canonical SoccerTrack revision.
 
 ## Remaining uncertainty
 
-Exact method novelty, canonical release alignment, rare-class handling, and final split policy still needed verification.
+No feasibility run or model experiment had yet been executed. Exact data revision, final folds, visual backbone, sample rates, and compute consumption remained unresolved.
 
 ## Next direction
 
-Run a final hostile review of the candidate and lock the benchmark only after re-checking the primary papers and SoccerTrack release details.
+Translate the scientific lock into a resource-budgeted system architecture and run a small end-to-end feasibility pilot before full experiments.
 
 ## Historical continuity
 
@@ -63,6 +65,6 @@ This release is a **complete repository snapshot**, not a patch. Earlier notes r
 
 ## Preservation notes
 
-The AI research-run corrections, direct BAS statistics, rejected candidates, and compute decisions remain part of the research record even where later releases refine them.
+Earlier candidate names and provisional benchmark notes remain linked as historical states. Withdrawn estimates and corrections are explicitly retained rather than erased.
 
 For the original v1-v5 lineage, see the project's version-history and migration notes as well as [[RELEASE_HISTORY]].
