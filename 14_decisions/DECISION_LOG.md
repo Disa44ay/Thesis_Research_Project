@@ -157,3 +157,6 @@ Recent verified work already uses tactical and graph context. See [[07_topic_sel
 
 ## 2026-08-14 - Candidate 01 survives full re-verification
 Core novelty is now the empirical value of explicit player game state for future BAA. Relation-aware modeling is a controlled method study, not the main invention. Exact dataset counts and folds remain gated on canonical release/alignment validation. See [[../19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]].
+
+## 2026-08-14 - Primary title and feasibility-first execution
+Primary title selected: **Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football**. Full-scale paid compute is gated by a 10-minute raw-to-prediction pilot. Raw 4K/GSR are processed once into compact features; normal training operates on those features. See [[../20_system_architecture/FEASIBILITY_PILOT_PLAN]].

@@ -1,30 +1,22 @@
 ---
 type: topic-status
-status: keep-and-advance
+status: primary-proposal-selected
 updated: 2026-08-14
-tags: [topic-selection, baa, soccertrack-v2]
+tags: [topic-selection, baa, title-locked]
 related:
-  - "[[candidates/Candidate 01 - Game State Aware Action Anticipation]]"
-  - "[[candidates/Candidate 01B - Relation Aware Multimodal BAA]]"
-  - "[[../19_verification/PHASE_3_NOVELTY_LOCK]]"
+  - "[[PHASE_5_TITLE_PACKAGE]]"
   - "[[../00_project_governance/CURRENT_STATE]]"
+  - "[[../19_verification/PHASE_3_NOVELTY_LOCK]]"
 ---
 # Topic Lock Status
 
-## Decision
-**KEEP AND ADVANCE Candidate 01**, with narrowed novelty.
+## Primary proposal
+**Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football**
 
-## Current research framing
-Evaluate whether explicit synchronized player-level game state provides complementary predictive value for short-horizon Ball Action Anticipation, and whether relation-aware player modeling adds value beyond flat structured fusion.
+## Status
+Selected as the primary instructor-facing thesis proposal after adversarial literature review, dataset audit, benchmark design, novelty re-verification, and architecture/feasibility planning.
 
-## Why it survives
-1. BAA exists, so the task is grounded.
-2. Game-state fusion exists for detection/spotting, so the information source is grounded.
-3. The reviewed literature does not establish the same explicit game-state fusion question for an unobserved future BAA interval.
-4. SoccerTrack v2 supplies the necessary synchronized modalities.
-5. A negative result remains scientifically interpretable.
+## Core contribution
+Evaluate whether explicit synchronized player game state provides complementary predictive value for future BAA. Relation-aware modeling is a controlled secondary method question rather than the primary novelty claim.
 
-## What is no longer claimed
-GNNs, player graphs, multimodal football action understanding, tactical context, and future football-event prediction are not treated as first-time inventions.
-
-Final instructor-facing title selection is deferred to Phase 5 and will be recorded in the next release.
+See [[PHASE_5_TITLE_PACKAGE]] for alternatives and [[../20_system_architecture/FEASIBILITY_PILOT_PLAN]] for the pre-full-scale proof.

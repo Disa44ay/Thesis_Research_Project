@@ -2,7 +2,7 @@
 type: session-log
 status: active
 tags: [session, history]
-updated: 2026-08-14
+updated: 2026-08-16
 ---
 # Session Log
 
@@ -80,3 +80,24 @@ Related works, limitations, novelty boundary, benchmark design, title lock, full
 
 ## 2026-08-14 - Scientific lock
 Claude PR-005 returned KEEP BUT NARROW. Independent re-verification confirmed Candidate 01 but corrected context-window wording, mAP tolerance interpretation, method novelty, SoccerTrack release provenance, provisional BAS cleaning, and fold assignment. Architecture/experiment ladder B0-B5 was locked.
+
+## 2026-08-14 - Proposal and system architecture
+Phase 5 selected the instructor-facing title. The research system was extended from raw SoccerTrack v2 data through canonical revision pinning, GSR streaming, visual feature extraction, alignment, compact windowed training, grouped evaluation, a 100-unit soft budget, and a 10-minute feasibility pilot. A detailed academic proposal was commissioned in LaTeX/PDF.
+
+## 2026-08-14 to 2026-08-16 - Proposal simplification and feasibility handoff
+
+1. The first long-form proposal was judged too long and disorganized for the intended instructor-facing proposal.
+2. A concise verified proposal was produced instead.
+3. A separate citation/source audit was created to preserve evidence depth without cluttering the proposal.
+4. A short teammate brief was produced.
+5. The feasibility study was expanded into an operational step-by-step guide and self-contained context handoff.
+6. The common pilot was set to match 117093, approximately 10 minutes, unless the pinned canonical revision reveals a new issue.
+7. Independent teammate replication was added as a structural validation rule.
+8. No feasibility experiment or scientific model result had been executed by the end of this state.
+
+## 2026-08-16 - Feasibility handoff and public-release reconstruction
+
+1. Audited historical v1-v5 and preserved the original lineage.
+2. Grouped public Git history into four synchronized semantic releases.
+3. Added release-management documentation without rewriting historical research findings.
+4. Release 04 synchronized verified post-v5 proposal and feasibility artifacts.

@@ -7,82 +7,103 @@ This file preserves the README text that existed in the historical snapshot used
 ---
 type: moc
 status: active
-version: v4
+version: v5
 updated: 2026-08-14
-tags: [thesis, research-project, git-ready, moc]
+tags: [thesis, football, baa, git-ready, moc]
 ---
-# Thesis Research Project
+# Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football
 
 ## 1. Project Overview
-This repository preserves the complete research journey for an undergraduate CSE thesis on football video understanding. The active direction evaluates whether explicit player-level game state can improve short-horizon Ball Action Anticipation, where future ball actions must be predicted before the target action becomes visible.
+This research project investigates whether explicit synchronized player-level game state can improve short-horizon football Ball Action Anticipation. The model observes football context before an action occurs and predicts the classes and temporal locations of ball actions in the following 5-second unobserved interval.
 
-The vault preserves both successful and rejected directions, evidence corrections, AI research runs, dataset audits, benchmark decisions, and implementation gates so the final thesis can be reconstructed from its reasoning history.
+The repository also preserves the complete research journey: rejected directions, literature threats, AI-assisted audits, direct dataset inspection, corrections, benchmark decisions, compute constraints, and the final proposal architecture.
 
 ## 2. Features
-1. Full topic-evolution history from PCBAS and football retrieval/forecasting candidates to the current BAA direction.
-2. Primary-source related-work graph with explicit novelty threats.
-3. PR-001 through PR-005 AI research-run provenance and corrections.
-4. Direct SoccerTrack v2 BAS audit and release-quality risk tracking.
-5. Evidence-locked benchmark framework and leakage rules.
-6. Controlled B0-B5 experiment ladder separating modality value from relation-model value.
-7. Decision and rejection logs that preserve why claims were downgraded.
-8. Obsidian backlinks connecting sources, gaps, decisions, datasets, experiments, and verification notes.
+1. Visual-only, game-state-only, simple-fusion, flat-relations, and relation-aware controlled baselines.
+2. Derived SoccerTrack v2 BAA protocol with strict match-level leakage prevention.
+3. Version-pinned dataset and cross-modal BAS/GSR/video alignment gates.
+4. Streaming preprocessing for multi-gigabyte GSR JSON files.
+5. One-time frozen visual feature extraction from panoramic 4K video.
+6. Compact continuous feature stores instead of duplicated overlapping clips.
+7. Five-fold grouped evaluation where final usable match count permits it.
+8. Mini 10-minute feasibility pilot before spending the full paid compute budget.
+9. Zero-recurring-cost inference/demo architecture.
+10. Graph-native Obsidian research history with PR-001 through PR-005 and correction provenance.
 
 ## 3. Tech Stack
-1. **Obsidian Markdown** for the research knowledge graph.
-2. **Git** for history, diffs, tags, and reproducible releases.
-3. **Python / PyTorch** for preprocessing and model training.
-4. **FFmpeg** for video sampling and temporary clip processing.
-5. **Parquet / NumPy / NPZ** for compact model-ready artifacts.
-6. **SoccerTrack v2** for synchronized panoramic video, GSR, and BAS.
-7. **Colab/Kaggle** for resource-constrained experimentation.
+1. **Python + PyTorch**: training, evaluation, and feature processing.
+2. **FFmpeg**: efficient video sampling and temporary media processing.
+3. **SoccerTrack v2**: panoramic video, Game State Reconstruction, and Ball Action Spotting annotations.
+4. **Parquet + NumPy/NPZ**: compact event, state, and visual feature stores.
+5. **Streaming JSON tooling / official loaders**: safe GSR processing without whole-file loading.
+6. **Google Colab/Kaggle**: GPU/TPU access under a constrained compute budget.
+7. **FastAPI**: final lightweight inference service.
+8. **Obsidian + Git**: research knowledge graph, backlinks, diffs, tags, and historical snapshots.
+9. **LaTeX**: academic proposal and later thesis/paper writing.
 
 ## 4. Architecture
 ```mermaid
-flowchart LR
-    L[Primary Literature] --> G[Research Gap]
-    D[SoccerTrack v2] --> V[Dataset and Alignment Gate]
-    G --> B[Derived BAA Benchmark]
-    V --> B
-    B --> E[Visual / State / Fusion Baselines]
-    E --> R[Relation-Aware Controlled Model]
-    R --> A[Cross-Validated Analysis]
-    A --> P[Thesis + Reproducible Demo]
+flowchart TD
+    ST[SoccerTrack v2 pinned release] --> BAS[BAS]
+    ST --> GSR[GSR JSON]
+    ST --> VID[4K Video]
+    BAS --> VAL[Schema + time validation]
+    GSR --> STREAM[Stream + downsample + compact state]
+    VID --> FEAT[Sample + frozen visual features]
+    VAL --> ALIGN[Cross-modal alignment]
+    STREAM --> ALIGN
+    FEAT --> ALIGN
+    ALIGN --> WIN[Context -> next 5 s window manifest]
+    WIN --> M[Model-ready feature store]
+    M --> B1[Visual-only]
+    M --> B2[State-only]
+    M --> B3[Simple fusion]
+    M --> B4[Flat relations]
+    M --> B5[Relation-aware fusion]
+    B1 --> E[Grouped evaluation]
+    B2 --> E
+    B3 --> E
+    B4 --> E
+    B5 --> E
+    E --> API[Zero-cost demo / FastAPI]
 ```
 
-Current scientific state: [[00_project_governance/CURRENT_STATE]].  
-Full audit: [[19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]].
+System details: [[20_system_architecture/END_TO_END_DATA_SYSTEM_ARCHITECTURE]].  
+Feasibility gate: [[20_system_architecture/FEASIBILITY_PILOT_PLAN]].  
+Current state: [[00_project_governance/CURRENT_STATE]].
 
 ## 5. Project Structure
 ```text
 Thesis_Research_Project/
-├── 00_context/             # team/user context
-├── 00_project_governance/  # active state and project rules
-├── 01_goals_constraints/   # hard and soft constraints
-├── 02_journey/             # domain exploration history
-├── 03_datasets/            # dataset evidence and direct audits
-├── 04_literature/          # related work and source nodes
-├── 05_direction/           # task/domain concepts
-├── 06_research_gaps/       # historical and current gaps
-├── 07_topic_selection/     # candidates, downgrades, rejections
-├── 08_experiments/         # benchmark, baselines, architecture plans
-├── 09_implementation/      # compute and data pipeline
-├── 10_writing/             # thesis/paper status
-├── 11_publication/         # publication status
-├── 12_defense/             # defense preparation
-├── 13_execution/           # one-month execution plan
-├── 14_decisions/           # atomic decisions and master log
-├── 15_ai_configuration/    # AI roles and PR-001 ... PR-005
-├── 16_session_history/     # chronological work log
-├── 17_migration/           # original-vault provenance
-├── 18_version_history/     # snapshot lineage
-├── 19_verification/        # evidence locks and correction audits
-├── KNOWLEDGE_GRAPH.md      # graph map
+├── 00_context/              # researcher/team context
+├── 00_project_governance/   # current state and project rules
+├── 01_goals_constraints/    # compute, deployment, data, timeline constraints
+├── 02_journey/              # full domain/topic exploration history
+├── 03_datasets/             # SoccerTrack/SoccerNet evidence and direct audits
+├── 04_literature/           # verified sources and related-work matrix
+├── 05_direction/            # task and domain concepts
+├── 06_research_gaps/        # current and historical gap nodes
+├── 07_topic_selection/      # titles, candidates, downgrades, rejections
+├── 08_experiments/          # benchmark, baselines, model/ablation matrix
+├── 09_implementation/       # compute and implementation status
+├── 10_writing/              # thesis and paper status
+├── 11_publication/          # publication planning
+├── 12_defense/              # defense preparation
+├── 13_execution/            # one-month execution plan
+├── 14_decisions/            # atomic decisions and decision log
+├── 15_ai_configuration/     # AI roles and PR-001 ... PR-005
+├── 16_session_history/      # chronological research journey
+├── 17_migration/            # original-vault provenance
+├── 18_version_history/      # v1 ... v5 lineage
+├── 19_verification/         # evidence locks and correction audits
+├── 20_system_architecture/  # large-data, compute, alignment, pilot, deployment
+├── 21_proposal/             # proposal artifact index
+├── KNOWLEDGE_GRAPH.md       # graph-level map of the research
 └── README.md
 ```
 
-## Version
-This is **v4**, the scientific-lock snapshot after the post-v3 literature, benchmark, novelty, dataset, and architecture re-verification. See [[18_version_history/VERSION_HISTORY]].
+## Version and Evidence Boundary
+This is **v5, 2026-08-14**. Exact final benchmark counts and folds are intentionally not claimed until the pinned SoccerTrack v2 release passes the alignment and correction gate. See [[18_version_history/VERSION_HISTORY]] and [[19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]].
 
 
 Graph integrity record: [[GRAPH_AUDIT]].
@@ -96,3 +117,6 @@ Graph integrity record: [[GRAPH_AUDIT]].
 - [[08_experiments/EXPERIMENT_STATUS]]
 - [[17_migration/MIGRATION_MANIFEST]]
 - [[00_project_governance/PROJECT_RULES]]
+
+
+Proposal draft: [[21_proposal/PROPOSAL_DRAFT]].

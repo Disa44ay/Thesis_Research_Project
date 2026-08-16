@@ -8,6 +8,7 @@ related:
   - "[[BENCHMARK_DESIGN_DRAFT]]"
   - "[[../03_datasets/datasets/SoccerTrack v2]]"
   - "[[../19_verification/FULL_EVIDENCE_REVERIFICATION_2026-08-14]]"
+  - "[[../20_system_architecture/DATA_ALIGNMENT_AND_VALIDATION_PROTOCOL]]"
 ---
 # Benchmark Protocol Lock
 
@@ -44,4 +45,4 @@ Use FAANTRA/SoccerNet-style mAP at temporal tolerances delta in {1,2,3,4,5,infin
 5. Window generation cannot depend on the existence of a future event.
 
 ## Gate
-Exact usable event counts and fold identities remain provisional until the canonical dataset release and BAS/GSR/video alignment gate passes during implementation.
+Exact usable event counts and fold identities remain provisional until [[../20_system_architecture/DATA_ALIGNMENT_AND_VALIDATION_PROTOCOL]] passes.

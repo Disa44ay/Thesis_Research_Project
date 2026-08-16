@@ -1,8 +1,8 @@
 ---
 type: version-brief
 status: active
-public_release: "Release 03"
-historical_basis: "historical v4 (2026-08-14)"
+public_release: "Release 04"
+historical_basis: "historical v5 plus verified post-v5 work through 2026-08-16"
 updated: 2026-08-16
 tags: [release, history, git, obsidian]
 related:
@@ -10,54 +10,57 @@ related:
   - "[[RELEASE_HISTORY]]"
   - "[[ARCHITECTURE]]"
 ---
-# Version Brief — Release 03
+# Version Brief — Release 04
 
 ## Release identity
 
 **Project:** Thesis Research Project  
-**Public release:** Release 03 — Scientific Lock and Re-verification  
-**Historical basis:** historical v4 (2026-08-14)  
-**Previous public release:** Release 02
+**Public release:** Release 04 — Execution-Ready Proposal and Feasibility  
+**Historical basis:** historical v5 plus verified post-v5 work through 2026-08-16  
+**Previous public release:** Release 03
 
 ## Plain-language summary
 
-Release 03 is the scientific-lock stage. The project survived a final adversarial review, but several claims were narrowed or withdrawn. The thesis became centered on one defensible empirical question: whether explicit player game state adds predictive value to short-horizon Ball Action Anticipation, not whether graph reasoning or video-plus-state fusion is novel by itself.
+Release 04 is the current execution-ready thesis snapshot. The research question, evidence boundary, system architecture, compute strategy, proposal, and feasibility study are documented well enough to begin the pilot. The key status remains important: the feasibility study is planned and independently reproducible, but it has not yet been executed, and no scientific model result exists yet.
 
 ## Previous release summary
 
-Release 02 made Candidate 01B the leading direction using direct dataset evidence and multi-agent literature review, but several assumptions remained provisional.
+Release 03 scientifically locked the question, narrowed the novelty claim, documented dataset hazards, and defined the controlled B0-B5 experiment matrix.
 
 ## What changed
 
-1. Added PR-005, a focused Claude evidence-lock review.
-2. Re-verified FAANTRA, SoccerNet 2026 BAA, Ochin, SoccerTrack v2 and additional prior art from primary sources.
-3. Added Beyond Pixels as a novelty threat and downgraded relation/GNN method novelty.
-4. Locked the core research gap around explicit game-state value for unseen-future BAA.
-5. Corrected the interpretation of the 30-second observation context and BAA temporal mAP tolerances.
-6. Withdrew the provisional 21,438 'clean events' estimate.
-7. Withdrew exact fold pairings until canonical release and alignment validation.
-8. Documented canonical-source/schema differences, second-half alignment caveats, and the match 132831 correction issue.
-9. Defined the controlled B0-B5 experiment matrix, including a flat-relations control.
+1. Selected the safest primary title: Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football.
+2. Added an end-to-end raw-data-to-feature-store architecture.
+3. Added canonical dataset revision and cross-modal validation policies.
+4. Added GSR streaming/downsampling and one-time frozen visual feature extraction plans.
+5. Added compute budget, stop rules, and a 10-minute pilot before paid scaling.
+6. Added zero-recurring-cost deployment architecture as an engineering objective.
+7. Generated a detailed long-form proposal, then preserved it as superseded when it proved too disorganized for proposal use.
+8. Generated a concise verified proposal and a separate citation/source audit.
+9. Generated a three-page teammate brief.
+10. Expanded the pilot into a self-contained AI/teammate context handoff and step-by-step feasibility guide.
+11. Added independent teammate replication: the same pinned pilot should produce matching event counts, tensor shapes, windows, and validation outputs before the pipeline is considered structurally validated.
+12. Added release-reconstruction metadata and a reproducible vault validator.
 
 ## Why it changed
 
-The candidate had to survive the strongest prior work rather than rely on optimistic novelty language. Re-verification also showed that the Drive BAS snapshot and current documented release should not be silently treated as identical.
+The project had reached the point where scientific plausibility was no longer enough. The team needed proof that multi-gigabyte GSR JSON, panoramic video, alignment, compact features, model training, and Colab cost could be handled in practice. The proposal also needed to become shorter and easier for an instructor to evaluate without losing the detailed evidence trail.
 
 ## What we were trying to learn
 
-The research question remains useful even if the GNN adds no gain, because the study can separately test information value, relational features, and message passing. Dataset provenance is part of the scientific method, not merely preprocessing.
+A good thesis proposal should present the argument, not the entire laboratory notebook. Feasibility should be measured on a small complete pipeline, and replication should compare structural outputs before scientific results are trusted.
 
 ## Current understanding
 
-The topic is defensible with narrow claims. The benchmark framework is scientifically usable, but exact event counts and match folds remain gated on a pinned canonical SoccerTrack revision.
+The current goal is to determine whether explicit player-level game state helps predict future ball actions beyond visual evidence, then test whether relation-aware reasoning adds anything beyond equivalent flat relational features. The execution plan is compute-aware and data-quality-gated.
 
 ## Remaining uncertainty
 
-No feasibility run or model experiment had yet been executed. Exact data revision, final folds, visual backbone, sample rates, and compute consumption remained unresolved.
+The canonical experimental dataset revision is not pinned yet. The pilot has not run. Exact final event counts, folds, inclusion of match 132831, sample rates, backbone choice, compute cost, and model performance remain unknown.
 
 ## Next direction
 
-Translate the scientific lock into a resource-budgeted system architecture and run a small end-to-end feasibility pilot before full experiments.
+Run the same match-117093 approximately 10-minute feasibility pilot independently, validate BAS/GSR/video alignment and compact feature generation, overfit a tiny batch, measure resources, compare teammate outputs, then issue a GO/MODIFY/NO-GO decision before full-scale experiments.
 
 ## Historical continuity
 
@@ -65,6 +68,6 @@ This release is a **complete repository snapshot**, not a patch. Earlier notes r
 
 ## Preservation notes
 
-Earlier candidate names and provisional benchmark notes remain linked as historical states. Withdrawn estimates and corrections are explicitly retained rather than erased.
+Release 04 keeps the old PCBAS history, candidate alternatives, PR-001 through PR-005, dataset anomalies, withdrawn counts/folds, the superseded long proposal, and all later corrections. Plans are not rewritten as completed experiments.
 
 For the original v1-v5 lineage, see the project's version-history and migration notes as well as [[RELEASE_HISTORY]].
