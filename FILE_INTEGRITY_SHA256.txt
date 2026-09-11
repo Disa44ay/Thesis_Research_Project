@@ -8,6 +8,7 @@ Generated: 2026-09-11 (Release 05 audit-pass regeneration)
 
 The integrity file itself is excluded from hashing.
 
+f41be8a3c3b7e2d5285cfb503d1f889e4282600179f56917908689495b38e4d0  ./.gitignore
 7a180c33429a11924baeb866d03ceacee632d3271210e4f566f3948093699e75  ./.obsidian/app.json
 b5ec67ce7274ff96537675aea263961a2d67fb3c965c5c22484e28bbbf5172b5  ./00_context/USER_PROFILE.md
 488987c24ef95ca8258efe81ff07fc6bd827b2ab9ee26cc93d4cae4097d5b35e  ./00_project_governance/CURRENT_STATE.md

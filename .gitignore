@@ -1,0 +1,26 @@
+# Local / editor state
+.DS_Store
+Thumbs.db
+.obsidian/workspace*.json
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+
+# Secrets and local environment
+.env
+.env.*
+.venv/
+venv/
+
+# Large local research data and generated runs
+data/
+raw/
+processed/
+runs/
+checkpoints/
+models/
+tmp/
+.cache/
+
+# Generated exports can be attached to GitHub Releases instead
+exports/
