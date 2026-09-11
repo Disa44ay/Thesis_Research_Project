@@ -1,64 +1,52 @@
 ---
-type: project-state
-status: feasibility-ready
-updated: 2026-08-16
-tags: [current-state, thesis, baa, feasibility-ready]
-related:
-  - "[[../07_topic_selection/PHASE_5_TITLE_PACKAGE]]"
-  - "[[../19_verification/PHASE_3_NOVELTY_LOCK]]"
-  - "[[../20_system_architecture/END_TO_END_DATA_SYSTEM_ARCHITECTURE]]"
-  - "[[../21_proposal/PROPOSAL_REVISION_2026-08-14]]"
-  - "[[../22_feasibility/FEASIBILITY_REPLICATION_STATUS]]"
+type: current-state
+status: active
+tags: [current-state, thesis]
+updated: 2026-08-10
 ---
 # Current State
 
-## Primary title
+## Stage
+Research exploration and validation. Topic not finally locked.
 
-**Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football**
+## Leading direction
+Football Video Understanding → SoccerNet ecosystem → Player-Centric Ball Action Spotting, PCBAS.
 
-## Core research question
+## Candidate gap priority
+1. Player-ID or tracking-drop recovery.
+2. Tactical context or tactical priors.
+3. Audio-visual continuity.
+4. Shared lightweight backbone is currently high risk and rejected for the active constraints unless evidence changes.
 
-Does explicit synchronized player-level game state improve temporally localized short-horizon Ball Action Anticipation relative to visual-only anticipation?
+## Critical unresolved decisions
+Exact final dataset release or version, exact PCBAS benchmark definition, exact baseline to reproduce, exact publicly available multimodal inputs, validated research gap, final research question, and publication venue.
 
-## Secondary research question
+## Hard constraints still active
+Public or free datasets only. No dependence on a personal GPU. Free Colab or Kaggle compute must be treated as a real constraint. Team of three. Roughly one month of practical execution. Prefer implementation-heavy work and an end-to-end deployable system. Publication is an opportunity, not a guarantee.
 
-If game state helps, does relation-aware player modeling add value beyond flat state and flat relational features receiving the same underlying information?
+## Most important next action
+Verify the PCBAS literature, official dataset or benchmark details, baseline availability, and candidate gaps from primary sources before topic lock.
 
-## Evidence boundary
+## State update 2026-08-10
 
-The reviewed literature establishes video-based football BAA and separately establishes game-state-assisted football action detection/spotting. The current claim is narrower: the project will test whether explicit synchronized player state adds predictive value to unseen-future BAA.
+### Immediate goal
+Produce 2 to 3 defensible football thesis candidate titles within two days, then continue validation before final topic lock.
 
-## Dataset
+### Search scope
+Football is now the active domain boundary. Computer Vision is preferred because of instructor fit. Multimodality is a strong preference only when meaningful.
 
-SoccerTrack v2 is the primary feasibility dataset, but the exact experimental revision has **not yet been pinned**. The canonical revision must pass schema, correction, and cross-modal alignment validation before final counts or folds are frozen.
+### Current top candidate families
+1. [[07_topic_selection/candidates/Candidate 01 - Game State Aware Action Anticipation]]
+2. [[07_topic_selection/candidates/Candidate 02 - Tactical Spatiotemporal Retrieval]]
+3. [[07_topic_selection/candidates/Candidate 03 - Tactical State Forecasting]]
 
-## Benchmark direction
+### Important downgrades and rejections
+1. [[07_topic_selection/rejections/Generic Football RAG]] is rejected as a generic thesis framing because SoccerRAG already covers multimodal natural-language soccer retrieval.
+2. [[07_topic_selection/rejections/Exact 30 Second Future Prediction]] is rejected as the current forecasting target. Short-horizon or coarse-state prediction remains viable.
+3. [[07_topic_selection/downgraded/PCBAS Generic Tactical Context]] is downgraded because FOOTPASS and 2026 PCBAS work already use tactical or graph context.
 
-- future horizon: 5 seconds,
-- variable-size multi-event prediction,
-- action class + future temporal location + confidence,
-- up to 30 seconds of available history in the broader benchmark design,
-- shorter effective context permitted for the initial model/pilot,
-- match-level grouped evaluation where the final usable match count permits,
-- BAA-style temporal mAP,
-- exact class/fold policy frozen only after canonical data validation.
+### New operational constraints
+Research compute may expand modestly through Colab, but [[01_goals_constraints/constraints/Zero Cost Deployment]] is a hard deployment rule. Dataset access, annotation, and effective team capacity are now explicit graph nodes.
 
-## Planned model comparison
-
-1. visual-only,
-2. game-state-only,
-3. simple fusion,
-4. flat relational features,
-5. relation-aware fusion.
-
-## Proposal
-
-The original long proposal is preserved, but the current instructor-facing artifact is the concise verified proposal described in [[../21_proposal/PROPOSAL_REVISION_2026-08-14]] and supported by [[../21_proposal/CITATION_AND_SOURCE_AUDIT]].
-
-## Immediate next action
-
-Run the independently reproducible feasibility pilot described in [[../22_feasibility/FEASIBILITY_REPLICATION_STATUS]].
-
-## Critical status
-
-**The feasibility pilot has not run. No scientific model result exists.**
+### Topic status
+No final topic is locked.

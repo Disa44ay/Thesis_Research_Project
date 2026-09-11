@@ -1,7 +1,7 @@
 ---
 type: moc
 status: active
-public_release: "Release 04"
+public_release: "Release 01"
 updated: 2026-08-16
 tags: [thesis, football, baa, git-ready, moc]
 ---
@@ -9,17 +9,16 @@ tags: [thesis, football, baa, git-ready, moc]
 
 ## 1. Project Overview
 
-This repository is the current execution-ready thesis state. The research question, proposal, raw-data-to-feature architecture, compute controls, and independent feasibility study are documented. The feasibility pilot and scientific experiments have not yet been run.
+This repository preserves the football thesis search at the end of the foundation period. Football is the active domain, the original PCBAS direction is preserved, and newer candidate families are being evaluated under explicit compute, data, annotation, and deployment constraints.
 
 Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known, what changed, and what remained uncertain at this release.
 
 ## 2. Features
 
-1. Safest primary title and concise verified proposal.
-2. Canonical dataset/version policy and cross-modal validation.
-3. GSR streaming, frozen visual extraction, compute stop rules and pilot.
-4. Independent teammate feasibility replication and self-contained handoff.
-5. Planned zero-recurring-cost demo architecture.
+1. Preserved PCBAS history and candidate gaps A-D.
+2. Football scope and feasibility constraints.
+3. Candidate families around anticipation, tactical retrieval, and forecasting.
+4. Atomic decision and research-history graph.
 
 ## 3. Tech Stack
 
@@ -34,7 +33,7 @@ Start with [[VERSION_BRIEF]] for a plain-language explanation of what was known,
 ## 4. Architecture
 
 ```text
-Pinned SoccerTrack --> BAS Validator + GSR Streamer + Frozen Video Features --> Alignment --> Window Store --> B1-B5 --> Grouped Evaluation --> Demo
+Constraints + Literature + Dataset Search --> Candidate Comparison --> Decisions --> Next Verification
 ```
 
 Implemented, planned, and experimental status are distinguished in [[ARCHITECTURE]] and the existing implementation/experiment notes.
@@ -43,6 +42,4 @@ Implemented, planned, and experimental status are distinguished in [[ARCHITECTUR
 
 The established numbered structure is preserved from context and constraints through literature, gaps, experiments, implementation, decisions, session history, verification, system architecture, and proposal material as those folders exist in this release.
 
-Release 04 additionally includes `21_proposal/` for current and historical proposal artifacts and `22_feasibility/` for the planned replication handoff.
-
-Core navigation: [[KNOWLEDGE_GRAPH]], [[00_project_governance/CURRENT_STATE]], [[22_feasibility/FEASIBILITY_HANDOFF_INDEX]], [[RELEASE_HISTORY]], [[GRAPH_AUDIT]].
+Core navigation: [[KNOWLEDGE_GRAPH]], [[00_project_governance/CURRENT_STATE]], [[RELEASE_HISTORY]], [[GRAPH_AUDIT]].
