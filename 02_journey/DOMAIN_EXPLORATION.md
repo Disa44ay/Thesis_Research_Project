@@ -1,95 +1,83 @@
----
-type: research-landscape
-status: migrated
-tags: [domains, history]
-source: DOMAIN_EXPLORATION.md
-updated: 2026-08-10
----
-# Domain Exploration Findings
+Domain Exploration Findings
 
-## Initial priority domains
+Initial priority domains
 
-### 1. Football Video Understanding
-Description:
-Automated understanding of broadcast soccer videos, including action spotting, player-centric actions, tracking, tactical analysis, replay grounding, anticipation, and multimodal video understanding.
+1. Football Video Understanding
 
-Research activity:
-Very high.
+Description: Automated understanding of broadcast soccer videos,
+including action spotting, player-centric actions, tracking, tactical
+analysis, replay grounding, anticipation, and multimodal video
+understanding.
 
-Industry relevance:
-Very high, especially sports analytics, scouting, broadcasting, and tactical analysis.
+Research activity: Very high.
 
-Major ecosystem:
-- SoccerNet
-- SoccerNet-v2
-- SoccerNet Tracking
-- SoccerNet challenge tasks
-- Player-Centric Ball Action Spotting
+Industry relevance: Very high, especially sports analytics, scouting,
+broadcasting, and tactical analysis.
 
-Main problem:
-Raw end-to-end video processing is compute-heavy.
+Major ecosystem: - SoccerNet - SoccerNet-v2 - SoccerNet Tracking -
+SoccerNet challenge tasks - Player-Centric Ball Action Spotting
 
-Important workaround:
-Use organizer-provided pre-extracted features/tracking information whenever legitimate for the experiment.
+Main problem: Raw end-to-end video processing is compute-heavy.
 
-### 2. Satellite Vision / Remote Sensing
-Description:
-Computer vision over satellite imagery for classification, segmentation, detection, and change detection.
+Important workaround: Use organizer-provided pre-extracted
+features/tracking information whenever legitimate for the experiment.
 
-Research activity:
-Very high.
+2. Satellite Vision / Remote Sensing
 
-Public datasets discussed:
-- LEVIR-CD
-- WHU-CD
-- xBD
-- SpaceNet
-- SpaceNet 7
-- EuroSAT
-- SEN12MS
+Description: Computer vision over satellite imagery for classification,
+segmentation, detection, and change detection.
 
-Compute:
-Generally manageable using patch-based training.
+Research activity: Very high.
 
-Publication potential:
-High.
+Public datasets discussed: - LEVIR-CD - WHU-CD - xBD - SpaceNet -
+SpaceNet 7 - EuroSAT - SEN12MS
 
-### 3. General Computer Vision — Document AI
-Document AI was considered because it strongly matches backend deployment.
+Compute: Generally manageable using patch-based training.
 
-Datasets discussed:
-- SROIE
-- FUNSD
-- CORD
-- DocVQA
-- PubLayNet
-- RVL-CDIP
-- XFUND
+Publication potential: High.
 
-Typical models:
-- LayoutLM/LayoutLMv3
-- Donut
-- TrOCR
-- lightweight detectors
+3. General Computer Vision — Document AI
 
-Compute:
-Generally low-to-medium with parameter-efficient methods.
+Document AI was considered because it strongly matches backend
+deployment.
 
-## Strategic conclusion
-The initial broad ranking favored:
-1. Document AI
-2. Satellite Vision
-3. Football Video Understanding
+Datasets discussed: - SROIE - FUNSD - CORD - DocVQA - PubLayNet -
+RVL-CDIP - XFUND
 
-However, the user's strong football interest caused deeper investigation of the SoccerNet ecosystem.
+Typical models: - LayoutLM/LayoutLMv3 - Donut - TrOCR - lightweight
+detectors
 
-The current project direction therefore shifted toward football rather than blindly following the easiest domain.
+Compute: Generally low-to-medium with parameter-efficient methods.
 
-## Search narrowing 2026-08-10
-The active search is now intentionally restricted to football rather than continuing cross-domain comparison.
+Strategic conclusion
 
-The search remains broader than PCBAS. Current areas of interest include tactical analysis, short-horizon forecasting or anticipation, intelligent football-video retrieval, Game State Reconstruction, player trajectories, and other football CV tasks that survive the project's constraints.
+The initial broad ranking favored: 1. Document AI 2. Satellite Vision 3.
+Football Video Understanding
 
-Camera style is not a restriction. Broadcast video, fixed or panoramic cameras, tactical views, top-down representations, and tracking-based datasets are acceptable when public, feasible, and scientifically useful.
+However, the user’s strong football interest caused deeper investigation
+of the SoccerNet ecosystem.
 
-Relevant active SoccerNet task families were verified from official challenge material. See [[04_literature/sources/SOURCE - SoccerNet Challenges 2026]].
+The current project direction therefore shifted toward football rather
+than blindly following the easiest domain.
+
+Search narrowing 2026-08-10
+
+The active search is now intentionally restricted to football rather
+than continuing cross-domain comparison.
+
+The search remains broader than PCBAS. Current areas of interest include
+tactical analysis, short-horizon forecasting or anticipation,
+intelligent football-video retrieval, Game State Reconstruction, player
+trajectories, and other football CV tasks that survive the project’s
+constraints.
+
+Camera style is not a restriction. Broadcast video, fixed or panoramic
+cameras, tactical views, top-down representations, and tracking-based
+datasets are acceptable when public, feasible, and scientifically
+useful.
+
+Relevant active SoccerNet task families were verified from official
+challenge material. See [[04_literature/sources/SOURCE - SoccerNet
+Challenges 2026]].
+
+------------------------------------------------------------------------
