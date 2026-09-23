@@ -60,3 +60,34 @@ SOURCE MATERIAL - independent replication has not yet occurred (see
 - First B0/B1 baseline training run once the above are complete.
 
 ------------------------------------------------------------------------
+
+# Experiment Log — Release 06 Addition
+
+## Gate H — Compute Feasibility Probe
+
+- **Date:** 2026-09-15
+- **Script:** `claude/gate_h_compute_feasibility_probe.py`
+- **What was measured:** wall-clock time, RAM, GPU utilization for a
+  representative pass of the acquisition/validation stage.
+- **Result:** ~5.8 min/match, ~0.73 compute units/match, GPU at ~0.34%
+  utilization. See `25_gate_validation/GATE_H_COMPUTE_FEASIBILITY_RESULTS.md`.
+- **Defect found during the run:** a per-window tensorization bug,
+  fixed by switching to a single streaming pass per half.
+
+## Gate E Extension — Multi-Match Offset Check
+
+- **Date:** 2026-09-16/17
+- **Script:** `claude/gate_e_multi_match_offset_check.py`
+- **What was measured:** RGB/GSR presentation-timestamp offset via
+  direct overlay, across all 10 matches / 20 halves.
+- **Result:** 1-second offset confirmed in 14/20 halves, absent in
+  6/20; new tail-loss defect (~10s missing video) found in 10/20
+  halves; 1 half left unclassified. See
+  `25_gate_validation/GATE_E_MULTI_MATCH_OFFSET_RESULTS.md`.
+
+## Scope note
+
+This is not a full experiment log entry for N1's dataset build or any
+B0-B5 model run — those experiments have not been packaged into this
+release. Only the two pre-implementation gate-validation scripts above
+are in scope.

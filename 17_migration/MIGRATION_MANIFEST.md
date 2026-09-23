@@ -80,3 +80,69 @@ and 21_proposal/). Feasibility-validation content was placed inside the
 existing 22_feasibility/ folder instead.
 
 ------------------------------------------------------------------------
+
+# Migration Manifest — Release 06 Addition
+
+## New structure added at Release 06
+
+```
+Thesis_Research_Project/
+├── 14_decisions/                                          (4 new files)
+│   ├── 2026-09-14 - Gate H and Gate E Pre-Task Protocol Established.md
+│   ├── 2026-09-14 - Four Notebook Pipeline Split.md
+│   ├── 2026-09-15 - Gate H Resolved CPU Only Feasible.md
+│   └── 2026-09-16 - Gate E Extension Run Across Ten Matches.md
+├── 25_gate_validation/                                     (NEW folder)
+│   ├── GATE_H_COMPUTE_FEASIBILITY_RESULTS.md
+│   ├── GATE_E_MULTI_MATCH_OFFSET_RESULTS.md
+│   └── GATE_STATUS_SUMMARY.md
+├── 26_implementation_architecture/                         (NEW folder)
+│   ├── FOUR_NOTEBOOK_PIPELINE_DECISION.md
+│   ├── COMMON_PY_ARCHITECTURE.md
+│   └── QUARANTINE_MECHANISM_DESIGN.md
+├── docs/diagrams/architecture/system_architecture_r06.md   (NEW)
+├── docs/diagrams/workflows/gate_h_gate_e_resolution_r06.md (NEW)
+├── docs/diagrams/experiments/four_notebook_pipeline_r06.md (NEW)
+├── ARCHITECTURE.md                                         (rewritten)
+├── README.md                                               (rewritten)
+├── VERSION_BRIEF.md                                        (rewritten)
+├── RELEASE_HISTORY.md                                      (new row)
+├── GRAPH_AUDIT.md                                          (rewritten)
+├── 14_decisions/DECISION_LOG.md                            (appended)
+├── 13_execution/ROADMAP.md                                 (appended)
+├── CURRENT_STATE.md                                        (new root file)
+├── 08_experiments/EXPERIMENT_LOG.md                        (appended)
+├── 18_version_history/VERSION_HISTORY.md                   (appended)
+├── 17_migration/MIGRATION_MANIFEST.md                      (this file)
+└── 16_session_history/SESSION_LOG.md                       (appended)
+```
+
+Note: Thesis has no `CHANGELOG.md` and no `10_change_log/`/`11_session_history/`
+folder pair — that layout belongs to the companion Reusable Research OS.
+The paths above are this project's real Release 05 locations.
+
+## Numbering note
+
+`25_gate_validation/` and `26_implementation_architecture/` use the
+next two free top-level numbers after the existing `24_publication_positioning/`
+folder from Release 05, avoiding the folder-numbering collision problem
+identified and fixed during Release 05 packaging (see
+`RELEASE_05_MAPPING_REPORT.md`).
+
+## Migration path
+
+1. No Release 01-05 folder was renamed, moved, or removed.
+2. `21_proposal/`, `22_feasibility/`, `23_experiment_framework/`,
+   `24_publication_positioning/`, and everything numbered below them
+   are unchanged and carried forward from the Release 05 snapshot.
+3. Root files marked "rewritten" replace the equivalent Release 05
+   file in full; their Release 05 versions remain readable in
+   `Thesis_Project_Release_05_COMPLETE_CONTEXT.txt`.
+
+## Compatibility considerations
+
+- No existing external reference is broken; all Release 05 paths remain
+  valid.
+- N1's own artifacts (notebook outputs, dataset inventory, the specific
+  132877 quarantine record) are not part of this migration and will be
+  introduced in a future release's own migration manifest.

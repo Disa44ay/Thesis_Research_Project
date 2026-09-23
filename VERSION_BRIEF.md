@@ -1,153 +1,145 @@
 ---
 type: version-brief
 status: active
-public_release: "Release 05"
-historical_basis: "post-Release-04 executed feasibility pilot, 2026-08-16 to 2026-08-20"
-updated: 2026-09-10
-tags: [release, history, git, obsidian, feasibility]
+public_release: "Release 06"
+historical_basis: "Release 05 plus the pre-implementation Gate H (compute feasibility) and Gate E extension (multi-match offset) pre-tasks, and the four-notebook pipeline architecture decision, 2026-09-14 to 2026-09-17"
+updated: 2026-09-22
+tags: [release, thesis, gates, architecture, pipeline]
 related:
   - "[[README]]"
   - "[[RELEASE_HISTORY]]"
   - "[[ARCHITECTURE]]"
-  - "[[22_feasibility/FEASIBILITY_STUDY_REPORT]]"
+  - "[[25_gate_validation/GATE_STATUS_SUMMARY]]"
+  - "[[26_implementation_architecture/FOUR_NOTEBOOK_PIPELINE_DECISION]]"
 ---
 
-# Version Brief — Release 05
+# Version Brief — Release 06
 
 ## Release identity
 
-**Project:** Thesis Research Project
-**Public release:** Release 05 — Feasibility Executed and Experiment-Ready
-**Historical basis:** the Release 04 execution-ready state, followed by
-the actual execution of the previously-planned feasibility pilot,
-2026-08-16 to 2026-08-20
-**Previous public release:** Release 04
+**Project:** Thesis Research Project — Evaluating Game-State Fusion for
+Short-Horizon Ball Action Anticipation in Football
+**Public release:** Release 06 — Pre-Implementation Gate Extension
+**Historical basis:** Release 05 plus the Gate H and Gate E extension
+pre-tasks and the four-notebook pipeline architecture decision,
+2026-09-14 to 2026-09-17
+**Previous public release:** Release 05
 
 ## Plain-language summary
 
-Release 04 ended with a fully planned, but not yet run, feasibility
-pilot. Release 05 records that the pilot was executed on representative
-match 117093 from SoccerTrack v2, resulted in a GO decision with strict
-scope control, and surfaced one genuinely new engineering finding: the
-released panoramic video's presentation timeline starts one second
-after match time zero, so RGB and GSR must be aligned by timestamp, not
-by raw decoded frame index. This release also converts the experiment
-matrix and publication framing from planned to ready-to-execute.
-
-## Previous release summary
-
-Release 04 selected the safest primary title, defined the raw-data-to-
-feature-store architecture, and produced a concise verified proposal,
-citation audit, and teammate brief — all before the pilot had run. It
-explicitly recorded: "the feasibility study is planned and independently
-reproducible, but it has not yet been executed, and no scientific model
-result exists yet."
+Release 05 confirmed, on one match, that the feasibility pilot works:
+alignment can be checked, features can be extracted, windows can be
+built. Before committing to the full B0-B5 model matrix, two things
+still needed measuring rather than assuming — how much the
+acquisition/validation stage actually costs to run, and whether the
+single-match alignment offset holds across the whole ten-match dataset.
+Release 06 records both measurements, the architecture decisions that
+followed from them, and stops there — deliberately, before the N1
+notebook's own execution.
 
 ## What changed
 
-1. Executed the previously-planned feasibility pilot on match 117093
-   (Colab notebook `SoccerTrack_v2_Feasibility_01.ipynb`; report dated
-   2026-08-20).
-2. Verified the BAS-to-GSR timestamp mapping rule empirically:
-   `local_ms = BAS_position - period_matchTimeStart`,
-   `local_frame = round(local_ms / 40ms)`, confirmed with zero-frame
-   boundary error.
-3. Discovered and documented the RGB/GSR one-second presentation-offset
-   issue: the panoramic video's PTS timeline begins at 1.000s while GSR
-   represents match time from 0.00s, so naive equal-frame-index overlay
-   produces visibly misaligned player boxes. Timestamp-based alignment
-   resolves this with a measured residual error of ~1.07e-13s (floating
-   point noise).
-4. Constructed the first real (not simulated) 30s-observation /
-   5s-anticipation benchmark for match 117093: 1,092 valid windows (535
-   first half, 557 second half); 233 negative, 144 single-action, 715
-   multi-action windows; 2,197 target assignments with zero duplicates.
-5. Confirmed a leakage-free structured sample (`117093_H1_0006`):
-   observation ends 59.96s, future window opens exactly at 60.00s.
-6. Extracted and encoded 150 timestamp-synchronized RGB frames via a
-   pretrained ResNet-18 probe on CPU, producing a finite (150, 512)
-   feature matrix aligned to a (150, 22, 2) structured game-state
-   tensor at the same 5 FPS grid.
-7. Issued a formal Go/No-Go decision: **GO, with strict scope control**
-   — the pipeline is buildable; whether fusion improves anticipation
-   remains the untested research hypothesis.
-8. Named the concrete remaining risks: only 10 matches total (evaluation
-   variance), unresolved rare-class/loss-weighting policy, unresolved
-   final visual backbone/resolution/sampling-rate, single-match
-   validation not yet extended to the full dataset.
-9. Converted the experiment framework and publication positioning notes
-   from planning documents into an execution-ready protocol referencing
-   the now-confirmed benchmark construction method.
+1. Added `25_gate_validation/` — Gate H results, Gate E extension
+   results, and a combined status summary that also states an open
+   tracking-sync discrepancy honestly rather than resolving it by
+   assumption.
+2. Added `26_implementation_architecture/` — the four-notebook pipeline
+   decision, the shared `common.py` module's architecture, and the
+   general quarantine-mechanism design (pattern only, no specific
+   match's quarantine decision).
+3. Added four decision records under `14_decisions/` covering the
+   protocol, the pipeline split, and each gate's resolution.
+4. Appended Release 06 entries to `14_decisions/DECISION_LOG.md`,
+   `13_execution/ROADMAP.md`, `08_experiments/EXPERIMENT_LOG.md`,
+   `18_version_history/VERSION_HISTORY.md`,
+   `17_migration/MIGRATION_MANIFEST.md`, and
+   `16_session_history/SESSION_LOG.md`.
+5. Rewrote `README.md`, `ARCHITECTURE.md`, `GRAPH_AUDIT.md` and added a
+   Release 06 row to `RELEASE_HISTORY.md`.
+6. Added a new root-level `CURRENT_STATE.md` — a quick-navigation file
+   this project did not have before (the existing
+   `00_project_governance/CURRENT_STATE.md` is a different, older file
+   and is unchanged), mirroring the equivalent file the companion
+   Reusable Research OS added at its own Release 05.
+7. Added three new diagrams under `docs/diagrams/`, each rendered to a
+   PNG under `docs/images/thesis/`.
+8. Regenerated `FILE_INTEGRITY_SHA256.txt` covering the full file tree.
 
 ## Why it changed
 
-The team needed to know, before committing further compute and writing
-time, whether the multimodal pipeline was actually buildable under real
-constraints (Colab-scale compute, the true distributed file layout,
-real annotation schemas) rather than the planned/assumed version
-described in Release 04. Running the pilot surfaced one real defect
-(the naive frame-index assumption) that would have silently corrupted
-any RGB-GSR fusion sample had it not been caught before scaling.
+Two named blockers had to close before the model matrix could
+responsibly start: unmeasured compute cost, and an unverified
+single-match alignment offset. Both were closed by real execution
+rather than by re-reading the Release 05 pilot report more carefully.
 
 ## What we were trying to learn
 
-Whether the previously-planned feasibility protocol actually survives
-contact with the real dataset, and whether a single representative
-match is sufficient evidence to greenlight building B0-B5 without first
-processing all ten matches.
+Whether the single-match feasibility pilot's results (compute
+assumption, alignment offset) could be trusted to hold at full dataset
+scale, or whether they needed independent, full-scale verification
+first.
 
 ## Current understanding
 
-The multimodal pipeline is technically feasible on one representative
-match. The scientific question — whether explicit game state adds
-predictive value beyond a visual-only baseline — is unaffected by this
-result and remains fully open. The GO decision authorizes moving from
-feasibility engineering into baseline implementation; it does not
-authorize skipping the ten-match extension or the independent teammate
-replication that Release 04 already required before treating the
-pipeline as structurally validated project-wide.
+They could not be trusted without verification, and both pre-tasks
+changed the picture: compute cost dropped from "assume GPU-bound" to
+"measured CPU-only, near-zero cost"; alignment went from "a fixed
+1-second offset" to "present in most but not all halves, plus a
+separate tail-loss defect the single-match pilot could not have found."
 
 ## Remaining uncertainty
 
-The ten-match extension has not been run. The canonical dataset revision
-is still not pinned. Rare-class handling, final visual backbone,
-resolution, and sampling rate remain implementation decisions. No model
-has been trained. Independent teammate replication of the pilot has not
-yet been confirmed as matching (see
-[[22_feasibility/FEASIBILITY_REPLICATION_STATUS]]).
+The one unresolved half from the Gate E extension check needed further
+review before the alignment code could treat every half as classified.
+That review happened during N1 execution and is out of scope here. The
+tracking-sync gap between this project's two state-tracking systems is
+also still open as of this release.
 
 ## Next direction
 
-Extend the validated single-match pipeline to all ten matches, pin the
-canonical dataset revision, lock the rare-class policy, obtain the
-independent teammate replication match, then begin B0 through B5
-baseline implementation per
-[[08_experiments/PHASE_4_MODEL_AND_EXPERIMENT_MATRIX]].
+Push Gate H and Gate E extension documentation to the git remote to
+close the tracking-sync gap, then scope and package the N1-N5 release
+covering the notebook executions themselves.
 
 ## Historical continuity
 
-This release is a **complete repository snapshot**, not a patch. Every
-Release 01-04 note remains present unmodified except where this brief,
-`CURRENT_STATE.md`, and the decision/session/version-history logs are
-explicitly updated to reflect the pilot's execution. No historical
-reasoning has been rewritten to look more certain in hindsight; the
-Release 04 "not yet executed" status is preserved as history and
-superseded only going forward from this release.
+This release is a **complete repository snapshot**, not a patch and not
+a reference to an earlier snapshot. Every Release 01-05 file is
+physically present in this package, content-identical to the Release 05
+snapshot, except where this brief and the specific
+root/change-log/session-history files listed above are explicitly
+appended to (the earlier release sections of those files are kept
+intact above the new Release 06 section, never rewritten in place).
+Anyone who opens this Release 06 package alone — without also opening
+the Release 04 or Release 05 packages — has the complete project
+history from v1 through Release 06 in front of them.
+
+"Content-identical" is stated deliberately rather than "byte-for-byte":
+these files were rebuilt from the Release 05 `COMPLETE_CONTEXT.txt` text
+dump, and that round trip can normalize a trailing rule line or a curly
+quote without changing the substance of a file. `FILE_INTEGRITY_SHA256.txt`
+in this package is the authoritative record of the actual bytes shipped
+here, computed by hashing this complete tree directly — it is not
+assumed to match the original Release 05 repository's own file hashes
+bit-for-bit, only its content.
+
+The repository's `.gitignore` and `.obsidian/` vault-config folder were
+copied forward unchanged from the Release 05 working copy for this
+release. Neither travels through a `COMPLETE_CONTEXT.txt` text-dump
+round trip, so an earlier build of this same package omitted them; that
+gap is fixed here by copying the real files rather than reconstructing
+their contents from scratch. `FILE_INTEGRITY_SHA256.txt` includes their
+hashes.
 
 ## Preservation notes
 
-Release 05 keeps the old PCBAS history, candidate alternatives, PR-001
-through PR-005, the superseded long proposal, all dataset anomalies and
-withdrawn counts/folds, and the full Release 04 architecture and
-proposal material. The one open naming inconsistency carried forward
-unmodified from Release 04 — `README.md`'s architecture diagram reads
-"B1-B5" while `08_experiments/PHASE_4_MODEL_AND_EXPERIMENT_MATRIX.md`
-defines six variants **B0-B5** (B0 is a statistical floor, not a fusion
-model) — is noted here rather than silently corrected in the old file;
-new Release 05 material uses the authoritative B0-B5 naming from the
-experiment matrix.
+Release 06 stops deliberately before N1's execution. Per explicit user
+instruction: "up until n1, don't include anything related to n1 — keep
+it until the structure update." N1's dataset inventory, alignment
+table, window counts, GSR-array results, and the 132877 quarantine
+decision are all excluded here, even though N1 has, per project memory,
+already run (completed 2026-09-22). This is a scope boundary, not a
+claim that the work does not exist.
 
-For the original v1-v5 lineage and Releases 01-04, see
-[[18_version_history/VERSION_HISTORY]] and [[RELEASE_HISTORY]].
-
-------------------------------------------------------------------------
+For the original v1-v5 lineage and Releases 01-05, see
+`18_version_history/VERSION_HISTORY.md` and [[RELEASE_HISTORY]].

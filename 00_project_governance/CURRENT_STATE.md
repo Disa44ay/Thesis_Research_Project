@@ -81,3 +81,14 @@ set, and no model has been trained or evaluated. See
 and is not yet confirmed.
 
 ------------------------------------------------------------------------
+
+## Release 06 note (2026-09-22)
+
+This file is kept exactly as it stood at Release 05 and is not rewritten
+in place, per this project's migration convention. It is now superseded
+as the project's current-status reference: the root-level
+[[../CURRENT_STATE]] (added at Release 06) carries the up-to-date
+status, including the Gate H and Gate E extension resolutions recorded
+in [[../25_gate_validation/GATE_STATUS_SUMMARY]]. Read this file for
+the Release 05 snapshot of project state; read the root `CURRENT_STATE.md`
+for the current one.

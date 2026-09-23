@@ -74,3 +74,17 @@ Public Git release mapping
 See [[../../RELEASE_HISTORY]] and [[../../VERSION_BRIEF]].
 
 ------------------------------------------------------------------------
+
+# Version History — Release 06 Addition
+
+| Internal version | Public release | Date closed (this portion) | Headline |
+|---|---|---|---|
+| v6 (in progress) | Release 06 | 2026-09-22 | Pre-implementation gate extension (Gate H, Gate E extension) and four-notebook pipeline architecture — everything through the pre-N1 structure update |
+
+## Continuity statement
+
+Continues the same v1 → v2 → v3 → v4 → v5 → v6 lineage as the Reusable
+Research OS. Release 06 packages only the portion of v6 that precedes
+N1's execution. N1 itself completed 2026-09-22 per project memory, but
+its execution results are deliberately withheld from this release and
+will be packaged, along with N2-N5, in a later release.

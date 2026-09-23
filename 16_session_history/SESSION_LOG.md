@@ -239,3 +239,36 @@ commissioned in LaTeX/PDF.
     consistency.
 
 ------------------------------------------------------------------------
+
+# Session Log — Release 06 Addition
+
+## 2026-09-14 — Gate protocol and pipeline architecture session
+
+Established the Gate H / Gate E extension protocol
+(`claude/PROTOCOL_gate_h_and_multi_match_offset.md`) and decided the
+four-notebook pipeline split with a shared `common.py` module.
+
+## 2026-09-15 — Gate H execution
+
+Ran `claude/gate_h_compute_feasibility_probe.py`. Measured ~5.8
+min/match, ~0.73 compute units/match, GPU at ~0.34% utilization. Fixed
+a per-window tensorization bug found during measurement. Gate H
+resolved: CPU-only feasible.
+
+## 2026-09-16/17 — Gate E extension execution
+
+Ran `claude/gate_e_multi_match_offset_check.py` across all 10 matches /
+20 halves. Found the Release-05 1-second offset in 14/20 halves,
+absent in 6/20. Found a new tail-loss defect (~10s missing video) in
+10/20 halves. One half left unresolved by the check.
+
+## 2026-09-22 — Release 06 packaging session
+
+Built the Release 06 public package for both the Reusable Research OS
+and this project, scoped to everything through the pre-implementation
+gate-extension and architecture decisions above, explicitly excluding
+N1's execution and all of N2-N5.
+
+**Scope decision (user-confirmed):** stop at the structure-update phase
+that preceded N1; N1 execution and later notebooks are reserved for a
+future release.

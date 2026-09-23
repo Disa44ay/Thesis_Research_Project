@@ -1,74 +1,74 @@
-Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation in Football
+# Thesis Research Project — Release 06
 
-1. Project Overview
+## 1. Project Overview
 
-This repository is the current thesis state at Release 05. The
-feasibility pilot has been executed on one representative match (GO
-decision, strict scope control); the ten-match extension, independent
-teammate replication, and all scientific experiments (B0-B5) have not
-yet been run.
+Evaluating Game-State Fusion for Short-Horizon Ball Action Anticipation
+in Football. The project studies whether synchronized player game-state
+data (SoccerTrack v2 Game State Reconstruction) improves anticipation of
+ball-related actions before they happen, compared to visual-only
+models, under a common B0-B5 evaluation protocol.
 
-Start with [[VERSION_BRIEF]] for a plain-language explanation of what
-was known, what changed, and what remained uncertain at this release,
-and [[22_feasibility/FEASIBILITY_STUDY_REPORT]] for the executed pilot
-itself.
+Release 06: Pre-Implementation Gate Extension records the two
+pre-tasks run between the Release 05 single-match feasibility pilot and
+the start of the mandatory model matrix — measuring real compute cost
+(Gate H) and testing the single-match alignment offset against the full
+ten-match dataset (Gate E extension) — plus the four-notebook pipeline
+architecture decision that followed from them.
 
-2. Features
+Start with [[VERSION_BRIEF]] for the release history and
+[[CURRENT_STATE]] for what is confirmed vs. still open.
 
-1.  Safest primary title and concise verified proposal.
-2.  Canonical dataset/version policy and cross-modal validation.
-3.  GSR streaming, frozen visual extraction, compute stop rules and
-    pilot.
-4.  Independent teammate feasibility replication and self-contained
-    handoff.
-5.  Planned zero-recurring-cost demo architecture.
+## 2. What's new at Release 06
 
-3. Tech Stack
+1. `25_gate_validation/` — Gate H and Gate E extension results, plus a
+   combined status summary.
+2. `26_implementation_architecture/` — the four-notebook pipeline
+   decision, `common.py`'s architecture, and the general
+   quarantine-mechanism design.
+3. Four new decision records under `14_decisions/`.
+4. Three new diagrams under `docs/diagrams/`.
 
-1.  Obsidian + Git for research history, backlinks, diffs, and release
-    management.
-2.  Primary literature and official dataset documentation for evidence
-    control.
-3.  SoccerTrack v2 / SoccerNet BAA literature where present in this
-    release.
-4.  Python/PyTorch/Jupyter for the planned data and model pipeline.
-5.  FFmpeg and compact NumPy/NPZ/Parquet stores in later execution
-    stages.
-6.  Google Colab/Kaggle as constrained accelerator environments.
-7.  FastAPI only as a later engineering/demo component, not the research
-    novelty.
+## 3. Research Question
 
-4. Architecture
+Whether an explicit description of match state (player positions,
+velocities, team relations) improves short-horizon anticipation of
+football actions, beyond what a visual-only model can infer, evaluated
+via SoccerNet's Ball Action Anticipation formulation on SoccerTrack v2.
 
-    Pinned SoccerTrack --> BAS Validator + GSR Streamer + Frozen Video Features --> Alignment --> Window Store --> B1-B5 --> Grouped Evaluation --> Demo
+## 4. Architecture
 
-Implemented, planned, and experimental status are distinguished in
-[ARCHITECTURE] and the existing implementation/experiment notes.
+```
+Research Goal --> Dataset Selection (SoccerTrack v2) --> Mini Feasibility
+Pilot (single match) --> Pre-Implementation Gate Extension (Gate H,
+Gate E extension) --> Four-Notebook Pipeline (N1-N4) --> B0-B5 Model
+Matrix --> Evaluation --> Publication
+```
 
-5. Project Structure
+See [[ARCHITECTURE]] for the updated flow and
+[[26_implementation_architecture/FOUR_NOTEBOOK_PIPELINE_DECISION]] for
+the notebook split.
 
-The established numbered structure is preserved from context and
-constraints through literature, gaps, experiments, implementation,
-decisions, session history, verification, system architecture, and
-proposal material as those folders exist in this release.
+## 5. Project Structure
 
-Release 04 additionally includes 21_proposal/ for current and historical
-proposal artifacts and 22_feasibility/ for the feasibility record
-(now executed - see below).
+The established numbered folders are preserved. Key entry points for
+this release:
 
-Release 05 additionally includes 23_experiment_framework/ for the
-execution-ready experiment protocol and 24_publication_positioning/
-for early publication framing, plus new required release-management
-files: 13_execution/ROADMAP.md, 08_experiments/EXPERIMENT_LOG.md,
-22_feasibility/ERROR_LOG.md, and 03_datasets/DATASET_DOCUMENTATION.md.
-22_feasibility/archive/ holds a superseded feasibility-report PDF
-(same content, earlier working title), kept for provenance rather than
-deleted.
+1. `14_decisions/` — decision records, including four new Release 06
+   entries.
+2. `21_proposal/`, `22_feasibility/` — Release 05 proposal and
+   feasibility content (unchanged).
+3. `23_experiment_framework/`, `24_publication_positioning/` — unchanged.
+4. `25_gate_validation/` — new at Release 06.
+5. `26_implementation_architecture/` — new at Release 06.
+6. `17_migration/`, `18_version_history/`, `16_session_history/` —
+   provenance and chronological history.
 
-Core navigation: [[KNOWLEDGE_GRAPH]],
-[[00_project_governance/CURRENT_STATE]],
-[[22_feasibility/FEASIBILITY_STUDY_REPORT]],
-[[22_feasibility/FEASIBILITY_HANDOFF_INDEX]], [[13_execution/ROADMAP]],
-[[RELEASE_HISTORY]], [[GRAPH_AUDIT]].
+See [[RELEASE_HISTORY]], `18_version_history/VERSION_HISTORY.md`, and
+[[GRAPH_AUDIT]].
 
-------------------------------------------------------------------------
+## 6. Scope boundary for this release
+
+This release stops before the N1 (Acquire & Validate) notebook's own
+execution. N1 has, per project memory, already run — but its results
+are deliberately withheld from Release 06 and reserved for a future
+release covering N1 through N5, per explicit project instruction.

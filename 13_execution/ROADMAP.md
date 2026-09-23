@@ -56,3 +56,35 @@ No model has been trained. No fusion-performance result exists. The GO
 decision covers pipeline buildability only.
 
 ------------------------------------------------------------------------
+
+# Roadmap — Release 06 Addition
+
+## Just closed (in scope for this release)
+
+- Gate H (compute feasibility) — resolved 2026-09-15.
+- Gate E extension (multi-match offset generalization) — resolved
+  2026-09-16/17.
+- Four-notebook pipeline architecture (N1-N4 + shared `common.py`) —
+  decided 2026-09-14.
+- Quarantine mechanism design (general pattern) — decided pre-N1.
+
+## Next (explicitly out of scope for Release 06)
+
+- N1 (Acquire & Validate) execution — per project memory, this notebook
+  has already run (completed 2026-09-22), but its results are withheld
+  from this release by deliberate scope decision, not because they are
+  unknown.
+- N2 (Visual Features, GPU session).
+- N3 (Game-State Features).
+- N4 (Fusion & Baselines) — the B0-B5 model matrix.
+- N5 — reserved, not yet scoped in detail.
+- Closing the tracking-sync gap recorded in
+  `25_gate_validation/GATE_STATUS_SUMMARY.md` by pushing Gate H/Gate E
+  documentation to the git remote so the automated daily check picks it
+  up.
+
+## Note on sequencing
+
+The next public release for this project will cover N1 through N5 as a
+single unit, consistent with the user's explicit instruction that
+"N1-N5 will be in a separate release."

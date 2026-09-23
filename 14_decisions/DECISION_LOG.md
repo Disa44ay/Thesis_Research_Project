@@ -210,3 +210,18 @@ verified. Effective usable match count is 8, not 9, pending that fix.
 See [[../22_feasibility/MATCH_132831_CALIBRATION_DEFECT]].
 
 ------------------------------------------------------------------------
+
+# Decision Log — Release 06 Addition
+
+| Date | Decision | Full record |
+|---|---|---|
+| 2026-09-14 | Gate H and Gate E pre-task protocol established | [[14_decisions/2026-09-14 - Gate H and Gate E Pre-Task Protocol Established]] |
+| 2026-09-14 | Four-notebook pipeline split (N1-N4 + shared common.py) | [[14_decisions/2026-09-14 - Four Notebook Pipeline Split]] |
+| 2026-09-15 | Gate H resolved — CPU-only feasible for acquisition/validation stage | [[14_decisions/2026-09-15 - Gate H Resolved CPU Only Feasible]] |
+| 2026-09-16/17 | Gate E extension run across ten matches — offset not universal, new tail-loss defect found | [[14_decisions/2026-09-16 - Gate E Extension Run Across Ten Matches]] |
+
+## Scope note
+
+No decision entry from N1's actual execution (including the specific
+132877 quarantine decision, made 2026-09-22 during N1) is included
+here. That belongs to the future N1-N5 release.
